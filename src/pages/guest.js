@@ -17,6 +17,16 @@ export default [
     },
   },
   {
+    path: '/sample-page-1',
+    exact: true,
+    component: import('../components/sample-page-1'),
+    seo: {
+      title: 'Sample Page 1',
+      description: 'Sample page 1',
+      image: CSSGlobalLocalImage,
+    },
+  },  
+  {
     path: '/global-local-css',
     exact: true,
     component: import('../components/global-local-css'),
