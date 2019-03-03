@@ -7,7 +7,7 @@
 [![Join the chat at https://gitter.im/react-pwa](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/react-pwa/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 
-# React PWA v2
+# Access Our Community
 A highly scalable, Progressive Web Application foundation,boilerplate, with the best Developer Experience.
 
 #### Demo: [https://demo.reactpwa.com](https://demo.reactpwa.com)
@@ -15,9 +15,12 @@ A highly scalable, Progressive Web Application foundation,boilerplate, with the 
 ### Quick Start
 Clone the repository:
 ```bash
-git clone https://github.com/Atyantik/react-pwa.git && cd react-pwa 
+git clone git@github.com:PhilAndrew/aoc.git && cd aoc
 ```
 
+```bash
+npm install
+```
 
 To start the project run following command in your terminal:
 ```bash
