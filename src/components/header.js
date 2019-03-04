@@ -55,6 +55,9 @@ export default class Header extends PureComponent {
               <Link className="navbar-item" to="/sample-page-1" onClick={() => this.closeMenuBar()}>
                 Sample Page 1
               </Link>
+              <Link className="navbar-item" to="/create-case" onClick={() => this.closeMenuBar()}>
+                Create Case
+              </Link>              
               <Link className="navbar-item" to="/global-local-css" onClick={() => this.closeMenuBar()}>
                 Global & Local CSS
               </Link>
@@ -63,9 +66,6 @@ export default class Header extends PureComponent {
               </Link>
               <Link className="navbar-item" to="/skeleton-loading" onClick={() => this.closeMenuBar()}>
                 Skeleton Loading
-              </Link>
-              <Link className="navbar-item" to="/image-optimization" onClick={() => this.closeMenuBar()}>
-                Image Optimization
               </Link>
               <Link className="navbar-item" to="/login" onClick={() => this.closeMenuBar()}>
                 Auth

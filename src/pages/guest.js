@@ -27,6 +27,16 @@ export default [
     },
   },  
   {
+    path: '/create-case',
+    exact: true,
+    component: import('../components/create-case'),
+    seo: {
+      title: 'Create Case',
+      description: 'Create Case',
+      image: CSSGlobalLocalImage,
+    },
+  },   
+  {
     path: '/global-local-css',
     exact: true,
     component: import('../components/global-local-css'),
