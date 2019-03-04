@@ -1,6 +1,38 @@
 import React from 'react';
 import GuestLayout from './guest-layout';
 import localStyles from './local-styles.css';
+import Select from 'react-select';
+
+
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+];
+
+
+class MySelect extends React.Component {
+  state = {
+    selectedOption: null,
+  }
+  handleChange = (selectedOption) => {
+    this.setState({ selectedOption });
+    console.log(`Option selected:`, selectedOption);
+  }
+  render() {
+    const { selectedOption } = this.state;
+
+    return (
+      <Select
+        value={selectedOption}
+        onChange={this.handleChange}
+        options={options}
+        isMulti={true}
+      />
+    );
+  }
+}
+
 
 export default () => (
   <GuestLayout>
@@ -22,7 +54,7 @@ export default () => (
             </div>
             <div className="mb-3">
             <label htmlFor="practice-area">Practice Area</label>
-            <input type="text" className="form-control" id="practice-area" placeholder="" required />
+            <MySelect />
             </div>
             <div className="mb-3">
             <label htmlFor="jurisdiction">Jurisdiction</label>
