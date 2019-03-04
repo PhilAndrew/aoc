@@ -12,6 +12,7 @@ export default class Server {
       head.push(<link key="dns-precache-googletagmanager" rel="preconnect" href="https://www.googletagmanager.com" />);
       head.push(<link key="dns-precache-cdn-codefund" rel="preconnect" href="https://cdn2.codefund.app" />);
       head.push(<meta key="meta-theme-color" name="theme-color" content="#209cee" />);
+      head.push(<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.2.1/cosmo/bootstrap.min.css" />);
       //
     });
 
