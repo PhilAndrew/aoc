@@ -55,3 +55,15 @@ margin-top: 0px;
 .centered-content {
   justify-content:center;
 }
+
+.navbar-item:hover {
+  background-color: #2980b9 !important;
+}
+
+.navbar-expand-lg {
+  background-color: #2980b9;
+}
+
+.header-text {
+  color: #ecf0f1;
+}
