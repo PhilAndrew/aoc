@@ -32,5 +32,22 @@ margin-top: 0px;
 }
 
 .bordered {
-  border: 1px dotted #000;
+  border: 1px dashed #000;
+}
+
+.profile-photo {
+  margin-bottom: 20px;
+  margin-top:30px;
+  margin-left: 20px;
+  border-radius: 75px;
+  width: 150px;
+  height: 150px;
+}
+
+.subtitle {
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: bold;
+  letter-spacing: -.02em;
+  margin-top: 0px;
 }

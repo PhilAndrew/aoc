@@ -2,7 +2,7 @@ import React from 'react';
 import GuestLayout from './guest-layout';
 import localStyles from './local-styles.css';
 import Select from 'react-select';
-
+import CatDog from '../resources/img/phil.jpeg';
 
 const countries = [{"id":4,"name":"Afghanistan","alpha2":"af","alpha3":"afg"},
 {"id":8,"name":"Albania","alpha2":"al","alpha3":"alb"},
@@ -297,7 +297,9 @@ export default () => (
     <div className="row ">
         <div className="col-md-2 order-md-1 bordered">
             <div className="row">
-            Left side menu
+            <img alt="todo" src={CatDog} class="profile-photo" />
+            <br />
+            <h3 class="subtitle">Contract List</h3>
             </div>
         </div>
         <div className="col-md-6 order-md-1 bordered">
