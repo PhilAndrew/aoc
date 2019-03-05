@@ -296,10 +296,11 @@ export default () => (
 
     <div className="row ">
         <div className="col-md-2 order-md-1 bordered">
-            <div className="row">
+            <div className="row centered-content">
+            <h3 class="subtitle">Welcome Philip</h3>
             <img alt="todo" src={CatDog} class="profile-photo" />
             <br />
-            <h3 class="subtitle">Contract List</h3>
+            <h3 class="subtitle">Contact List</h3>
             </div>
         </div>
         <div className="col-md-6 order-md-1 bordered">
