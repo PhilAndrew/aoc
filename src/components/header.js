@@ -52,7 +52,7 @@ export default class Header extends PureComponent {
               </button>
             </div>
             <div className={`navbar-menu ${open ? 'is-active' : ''} bordered`}>
-              <Link className="navbar-item" to="/home" onClick={() => this.closeMenuBar()}>
+              <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
                 Home
               </Link>
               <Link className="navbar-item" to="/sample-page-1" onClick={() => this.closeMenuBar()}>

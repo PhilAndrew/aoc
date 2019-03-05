@@ -297,7 +297,7 @@ export default () => (
     <div className="row ">
         <div className="col-md-2 order-md-1 bordered">
             <div className="row centered-content">
-            <h3 class="subtitle">Welcome Philip</h3>
+            <h3 class="subtitle">Welcome NGO User</h3>
             <img alt="todo" src={CatDog} class="profile-photo" />
             <br />
             <h3 class="subtitle">Contact List</h3>
