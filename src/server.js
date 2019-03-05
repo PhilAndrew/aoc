@@ -21,7 +21,7 @@ export default class Server {
       head.push(<link key="favicon" rel="shortcut icon" type="image/png" href={ReactPWAIcon} />);
       return true;
     });
-
+/*
     serverHandler.hooks.beforeHtmlRender.tapPromise('AddCodeFundScript', async (Application) => {
       Application.htmlProps.footer.push(<script id="js-codefund" async key="codefund" data-src="https://codefund.app/properties/136/funder.js" />);
     });
@@ -38,6 +38,6 @@ export default class Server {
             gtag('config', 'UA-108804791-2');`,
         }}
       />);
-    });
+    });*/
   }
 }

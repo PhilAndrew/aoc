@@ -21,8 +21,8 @@ export default [
     exact: true,
     component: import('../components/sample-page-1'),
     seo: {
-      title: 'Sample Page 1',
-      description: 'Sample page 1',
+      title: 'About Us',
+      description: 'About Us',
       image: CSSGlobalLocalImage,
     },
   },  
