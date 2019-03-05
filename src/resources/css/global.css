@@ -55,3 +55,21 @@ margin-top: 0px;
 .centered-content {
   justify-content:center;
 }
+
+.navbar-brand {
+  width: 240px !important;
+  height: 60px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  
+}
+.navbar-brand .navbar-item {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.navbar-item img {
+  width: 240px !important;
+  height: 60px !important;
+  max-height: 60px !important;
+}

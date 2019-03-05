@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import CatDog from '../resources/img/logo.png';
 
 export default class Header extends PureComponent {
   constructor(props) {
@@ -30,7 +31,9 @@ export default class Header extends PureComponent {
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="container">
             <div className="navbar-brand bordered">
-              <Link to="/" className=" navbar-item"><strong>AOC</strong></Link>
+              <Link to="/" className=" navbar-item">
+              <img alt="alt" src={CatDog} />
+              </Link>
               <button
                 type="button"
                 onClick={e => this.toggleMenuBar(e)}

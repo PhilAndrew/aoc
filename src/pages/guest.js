@@ -7,7 +7,7 @@ import ImageOptimizationImage from '../resources/img/seo/image-optimization.png'
 
 export default [
   {
-    path: '/home',
+    path: '/',
     exact: true,
     component: import('../components/home'),
     seo: {

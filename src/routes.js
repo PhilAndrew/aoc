@@ -16,7 +16,6 @@ export default class Routes {
     const routes = [
       ...GuestRoutes,
       ...AuthRoutes,
-      ...SplashScreen,
     ];
 
     routeHandler.hooks.initRoutes.tapPromise('AppRoutes', async () => {
