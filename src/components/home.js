@@ -84,7 +84,9 @@ export default () => (
                 </div>
                 <div className="field is-grouped">
                   <div className="control">
-                    <button type="submit" className="button is-link">Login</button>
+                    <button type="submit" className="button is-link margin-right-5px">NGO Login</button>
+                    <button type="submit" className="button is-link margin-right-5px">Law firm Coordinator Login</button>
+                    <button type="submit" className="button is-link">Lawyer</button>
                   </div>
                 </div>
           </div>
