@@ -302,6 +302,21 @@ export default () => (
             <br />
             <h3 class="subtitle">Contact List</h3>
             </div>
+            <div className="row">
+            <img alt="todo" src={CatDog} class="profile-photo-small" />
+              Peter<br />
+              Sales rep
+            </div>
+            <div className="row">
+            <img alt="todo" src={CatDog} class="profile-photo-small" />
+              Sarah<br />
+              I am a person
+            </div>
+            <div className="row">
+            <img alt="todo" src={CatDog} class="profile-photo-small" />
+              Jenny<br />
+              I am Jenny
+            </div>
         </div>
         <div className="col-md-6 order-md-1 bordered">
         <h4 className="mb-3 page-heading">Create a new Case</h4>

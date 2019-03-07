@@ -17,9 +17,9 @@ export default [
     },
   },
   {
-    path: '/sample-page-1',
+    path: '/about-us',
     exact: true,
-    component: import('../components/sample-page-1'),
+    component: import('../components/about-us'),
     seo: {
       title: 'About Us',
       description: 'About Us',
