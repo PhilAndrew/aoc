@@ -3,6 +3,7 @@ import GuestLayout from './guest-layout';
 import localStyles from './local-styles.css';
 import Select from 'react-select';
 import CatDog from '../resources/img/phil.jpeg';
+import LeftUserColumn from './left-user-column';
 
 const countries = [{"id":4,"name":"Afghanistan","alpha2":"af","alpha3":"afg"},
 {"id":8,"name":"Albania","alpha2":"al","alpha3":"alb"},
@@ -296,27 +297,7 @@ export default () => (
 
     <div className="row ">
         <div className="col-md-2 order-md-1 bordered">
-            <div className="row centered-content">
-            <h3 class="subtitle">Welcome NGO User</h3>
-            <img alt="todo" src={CatDog} class="profile-photo" />
-            <br />
-            <h3 class="subtitle">Contact List</h3>
-            </div>
-            <div className="row">
-            <img alt="todo" src={CatDog} class="profile-photo-small" />
-              Peter<br />
-              Sales rep
-            </div>
-            <div className="row">
-            <img alt="todo" src={CatDog} class="profile-photo-small" />
-              Sarah<br />
-              I am a person
-            </div>
-            <div className="row">
-            <img alt="todo" src={CatDog} class="profile-photo-small" />
-              Jenny<br />
-              I am Jenny
-            </div>
+          <LeftUserColumn />
         </div>
         <div className="col-md-6 order-md-1 bordered">
         <h4 className="mb-3 page-heading">Create a new Case</h4>
