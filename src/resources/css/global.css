@@ -96,3 +96,15 @@ margin-top: 0px;
   color: #ecf0f1;
 
 }
+
+.ngo-case {
+  padding-left:20px;
+  padding-right:20px;
+  margin-bottom:10px;
+  padding-bottom:10px;
+  padding-top: 5px;
+}
+
+.ngo-case button {
+  margin-right:10px;
+}
