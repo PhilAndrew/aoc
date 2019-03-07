@@ -108,3 +108,59 @@ margin-top: 0px;
 .ngo-case button {
   margin-right:10px;
 }
+
+
+
+.tagcloud03 ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.tagcloud03 ul li {
+	display: inline-block;
+	margin: 0 .3em .3em 0;
+	padding: 0;
+}
+.tagcloud03 ul li a {
+	position: relative;
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 2.5em 0 1em;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #333;
+	font-size: 13px;
+	text-decoration: none;
+}
+.tagcloud03 li span {
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	z-index: 2;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	background-color: #3498db;
+	border-radius: 100%;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+.tagcloud03 ul li a:hover {
+}
+.tagcloud03 ul li a:hover span {
+}
+
+
+
+.ngo-case .buttons {
+  margin-bottom: 10px;
+}
+.case-description {
+  margin-bottom: 10px;
+}
