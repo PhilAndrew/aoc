@@ -12,13 +12,12 @@ export default class NgoCase extends React.Component {
         <div className="col-md-12">
           <div className="border ngo-case">
             <div>
-            <a href="#">Document authentication - Sri Lanka</a>
+            <a href="#">{this.props.title}</a>
             <a href="#" className="float-right">Icons/Pictures</a>
             </div>
             <div class="case-description">
-              <p>We require a Sri Lankan expert to authenticate an extract from the Information Book of of a Police Station in Negombo. </p>
+              <p>{this.props.details}</p>
             </div>
-  
   
             <div className="buttons">
             <button className="" type="submit">Details</button>
