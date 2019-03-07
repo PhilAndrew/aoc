@@ -77,7 +77,7 @@ export default class Header extends PureComponent {
               <Link className="navbar-item" to="/create-case" onClick={() => this.closeMenuBar()}>
                 <p className="header-text">Create Case</p>
               </Link>              
-              <Link className="navbar-item" to="/global-local-css" onClick={() => this.closeMenuBar()}>
+              <Link className="navbar-item" to="/case-history" onClick={() => this.closeMenuBar()}>
                 <p className="header-text">Case History</p>
               </Link>
               <Link className="navbar-item" to="/typescript-counter" onClick={() => this.closeMenuBar()}>

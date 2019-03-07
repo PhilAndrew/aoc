@@ -37,12 +37,12 @@ export default [
     },
   },   
   {
-    path: '/global-local-css',
+    path: '/case-history',
     exact: true,
-    component: import('../components/global-local-css'),
+    component: import('../components/case-history'),
     seo: {
-      title: 'CSS - Globally & Locally | ReactPWA Demo',
-      description: 'Sometimes we use global css classes like pad-10 but sometimes we need to write class names within modules that do not conflict with other modules, that is where local css comes into the picture',
+      title: 'Case history',
+      description: '?',
       image: CSSGlobalLocalImage,
     },
   },
