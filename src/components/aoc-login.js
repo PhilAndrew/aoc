@@ -31,6 +31,13 @@ export default class AocLogin extends React.Component {
     }
   }
 
+  logout(e) {
+    cookie.setItem('secretKey', '');
+    this.setState({
+        loggedIn: false,
+      });
+  }
+/*
   handleSubmit(e) {
     if (e && e.preventDefault) e.preventDefault();
     const loginData = new FormData(e.target);
@@ -47,7 +54,31 @@ export default class AocLogin extends React.Component {
         loggedIn: true,
       });
     }
+  }*/
+
+  loginNgo(e) {
+    cookie.setItem('secretKey', 'allowmein');
+        this.setState({
+        loggedIn: true,
+      });
+      console.log('1');
   }
+
+  loginLawFirmCoordinator(e) {
+    cookie.setItem('secretKey', 'allowmein');
+    this.setState({
+        loggedIn: true,
+      });
+    console.log('2');
+    }
+
+  loginLawyer(e) {
+    cookie.setItem('secretKey', 'allowmein');
+    this.setState({
+        loggedIn: true,
+      });
+    console.log('3');
+    }
 
   render() {
     const {
@@ -58,9 +89,14 @@ export default class AocLogin extends React.Component {
     } = this.state;
     if (!loaded) return null;
     if (loggedIn) {
-      return <Redirect push={false} to={this.onLoginRedirectUrl} />;
+      //return <Redirect push={false} to={this.onLoginRedirectUrl} />;
+      return <div>
+          <p>Welcome logged in person</p>
+          <button type="submit" className="button is-link margin-right-5px" onClick={e => this.logout(e)}>Logout</button>
+          </div>
     }
     return (
+        <div>
         <section className="row">
         <div className="col-md-4 section_title animated wow fadeInUp">
                 <h2>User login.</h2>
@@ -98,13 +134,14 @@ export default class AocLogin extends React.Component {
               </div>
               <div className="field is-grouped">
                 <div className="control">
-                  <button type="submit" className="button is-link margin-right-5px">NGO Login</button>
-                  <button type="submit" className="button is-link margin-right-5px">Law firm Coordinator Login</button>
-                  <button type="submit" className="button is-link">Lawyer</button>
+                  <button type="submit" className="button is-link margin-right-5px" onClick={e => this.loginNgo(e)}>NGO Login</button>
+                  <button type="submit" className="button is-link margin-right-5px" onClick={e => this.loginLawFirmCoordinator(e)}>Law firm Coordinator Login</button>
+                  <button type="submit" className="button is-link" onClick={e => this.loginLawyer(e)}>Lawyer</button>
                 </div>
               </div>
         </div>
         </section>
+        </div>
     );
   }
 }
