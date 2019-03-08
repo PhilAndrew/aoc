@@ -21,7 +21,7 @@ export default class NgoCase extends React.Component {
   
             <div className="buttons">
             <button className="" type="submit">Details</button>
-            <button className="" type="submit">Approve</button>
+            <button className="" type="submit">Remove</button>
             </div>     
   
             <div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import GuestLayout from './guest-layout';
+import AocLogin from './aoc-login';
 
 const Column = (props) => {
   const { title, description, link } = props;
@@ -37,6 +38,8 @@ Column.propTypes = {
   link: PropTypes.string.isRequired,
 };
 
+
+
 export default () => (
   <GuestLayout>
     <section className="hero is-medium is-info is-bold">
@@ -47,50 +50,7 @@ export default () => (
           <br /><br />
           </div>
           </section>
-          <section className="row">
-          <div className="col-md-4 section_title animated wow fadeInUp">
-                  <h2>User login.</h2>
-                </div>          
-          <div className="col-md-6">
-          <div className="field">
-                  <label className="label" htmlFor="username">
-                    username
-                    <div className="control">
-                      <input
-                        defaultValue="User name"
-                        id="username"
-                        name="username"
-                        className={`input`}
-                        type="text"
-                        placeholder="Username input"
-                      />
-                    </div>
-                  </label>
-                </div>
-                <div className="field">
-                  <label className="label" htmlFor="password">
-                    password
-                    <div className="control">
-                      <input
-                        defaultValue="Password"
-                        id="password"
-                        name="password"
-                        className={`input`}
-                        type="password"
-                        placeholder="Password input"
-                      />
-                    </div>
-                  </label>
-                </div>
-                <div className="field is-grouped">
-                  <div className="control">
-                    <button type="submit" className="button is-link margin-right-5px">NGO Login</button>
-                    <button type="submit" className="button is-link margin-right-5px">Law firm Coordinator Login</button>
-                    <button type="submit" className="button is-link">Lawyer</button>
-                  </div>
-                </div>
-          </div>
-          </section>
+            <AocLogin />
           <section className="row">
           <div className="col-md-12">
           <br /><br />
