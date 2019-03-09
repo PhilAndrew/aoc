@@ -49,6 +49,8 @@
     "react-router-config": "^4.4.0-beta.6",
     "react-router-dom": "^4.3.1",
     "react-select": "^2.4.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.85.0",
     "snyk": "^1.124.1",
     "universal-fetch": "^1.0.0"
   },

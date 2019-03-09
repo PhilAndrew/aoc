@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Card, Grid } from 'semantic-ui-react';
 import GuestLayout from './guest-layout';
 import AocLogin from './aoc-login';
 
@@ -78,6 +79,29 @@ export default () => (
             </section>
         </div>
       </div>
+      <Grid>
+        <Grid.Row>
+          <Grid.Column>
+            <Card>
+              <Card.Content>
+                <Card.Header>NGO</Card.Header>
+              </Card.Content>
+              <Card.Content extra>
+                <Card.Meta>Non-Government Organization</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <Card.Description>LOG IN HERE</Card.Description>
+              </Card.Content>
+            </Card>
+          </Grid.Column>
+          <Grid.Column>
+
+          </Grid.Column>
+          <Grid.Column>
+
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     </section>
   </GuestLayout>
 );
