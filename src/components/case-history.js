@@ -8,7 +8,7 @@ import LeftUserColumn from './left-user-column';
 
 export default () => (
   <GuestLayout>
-    <div className="container p-b-md p-r-md p-l-md">
+    <div className="page-middle container p-b-md p-r-md p-l-md">
 
     <div className="row ">
         <div className="col-md-2 order-md-1 bordered">
@@ -17,7 +17,7 @@ export default () => (
 
         </div>
         <div className="col-md-10 order-md-1 bordered">
-        <h4 className="mb-3 page-heading">Case history</h4>
+        <h4 className="mb-3 page-heading">Available cases</h4>
 
         <NgoCase title="Document authentication - Sri Lanka" details="We require a Sri Lankan expert to authenticate an extract from the Information Book of of a Police Station in Negombo." />
         <NgoCase title="Action Against Prohibited Conduct" details="Support a lawyer who wants to set up a non-profit legal entity or social enterprise in Singapore focused on supporting employees of international organizations who have experienced sexual harassment, discrimination and abuse with pro bono legal advice" />        

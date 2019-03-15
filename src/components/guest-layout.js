@@ -6,7 +6,7 @@ export default function (props) {
   // eslint-disable-next-line
   const { children } = props;
   return (
-    <div>
+    <div className="guest-layout">
       <Header />
       {children}
       <br />

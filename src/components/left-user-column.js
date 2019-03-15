@@ -8,26 +8,28 @@ export default class LeftUserColumn extends React.Component {
   
     render() {
         return <div>
-        <div className="row centered-content">
-        <h3 class="subtitle">Welcome NGO User</h3>
-        <img alt="todo" src={CatDog} class="profile-photo" />
-        <br />
-        <h3 class="subtitle">Contact List</h3>
+        <div className="row">
+        <div className="col-md-12">
+        <h3 class="subtitle">Search</h3>
+        </div>
         </div>
         <div className="row">
+        <div className="col-md-12">
         <img alt="todo" src={CatDog} class="profile-photo-small" />
         Peter<br />
         Sales rep
-        </div>
+        </div></div>
         <div className="row">
+        <div className="col-md-12">
         <img alt="todo" src={CatDog} class="profile-photo-small" />
         Sarah<br />
         I am a person
-        </div>
+        </div></div>
         <div className="row">
+        <div className="col-md-12">
         <img alt="todo" src={CatDog} class="profile-photo-small" />
         Jenny<br />
-        I am Jenny
+        </div>
         </div>
         </div>
     }

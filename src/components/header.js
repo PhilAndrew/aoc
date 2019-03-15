@@ -45,7 +45,7 @@ export default class Header extends PureComponent {
         <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
           <div className="container header">
             <div className="navbar-brand">
-              <Link to="/" className=" navbar-item"><p className="header-text"><strong>AOC</strong></p></Link>
+              <Link to="/" className=" navbar-item"><p className="header-text header-logo-text"><strong>AOC</strong></p></Link>
               <button
                 type="button"
                 onClick={e => this.toggleMenuBar(e)}
