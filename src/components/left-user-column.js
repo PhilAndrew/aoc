@@ -53,12 +53,12 @@ export default class LeftUserColumn extends React.Component {
 
         <div className="row">
         <div className="col-md-12">
-        <label htmlFor="practice-area">Practice Area</label>
+        <label htmlFor="practice-area">Legal Practice Area</label>
         <PracticeAreaSelect />
         </div></div>
         <div className="row">
         <div className="col-md-12">
-        <label htmlFor="practice-area">Practice Area</label>
+        <label htmlFor="practice-area">Region</label>
         <PracticeAreaSelect />
         </div></div>
         </div></div>
