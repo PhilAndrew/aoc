@@ -6,17 +6,19 @@ import CatDog from '../resources/img/phil.jpeg';
 import NgoCase from './ngo-case';
 import LeftUserColumn from './left-user-column';
 
+
+
 export default () => (
   <GuestLayout>
-    <div className="page-middle container p-b-md p-r-md p-l-md">
+    <div className=" p-b-md p-r-md p-l-md">
 
-    <div className="row ">
-        <div className="col-md-2 order-md-1 bordered">
+    <div className="page-middle container row ">
+        <div className="col-md-3 order-md-1 bordered">
 
         <LeftUserColumn />
 
         </div>
-        <div className="col-md-10 order-md-1 bordered">
+        <div className="col-md-9 order-md-1 bordered">
         <h4 className="mb-3 page-heading">Available cases</h4>
 
         <NgoCase title="Document authentication - Sri Lanka" details="We require a Sri Lankan expert to authenticate an extract from the Information Book of of a Police Station in Negombo." />
