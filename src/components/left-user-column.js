@@ -44,7 +44,7 @@ export default class LeftUserColumn extends React.Component {
         return <div>
         <div className="row">
         <div className="col-md-12">
-        <h3 class="subtitle">Search</h3>
+        <h3 className="subtitle">Search</h3>
         </div>
         </div>
 
