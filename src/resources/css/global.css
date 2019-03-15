@@ -85,6 +85,8 @@ margin-bottom: 15px !important;
   /*background-image:url(https://s3.amazonaws.com/deskpass-cms/direct_uploads/1551203592_DPYellow.jpeg);*/
   /*background-color: #77cc6d;*/
   /*background-color: rgb(229, 236, 237);*/
+  /*background-image: linear-gradient(180deg,#E29502,#E18F6F);*/
+  background-color: #3A9FE7;
 }
 
 .navbar-brand {
@@ -117,7 +119,6 @@ margin-bottom: 15px !important;
 }
 
 .navbar-expand-lg {
-  background-color: #E59502;
   border-bottom: 5px solid #ccc;
 }
 
@@ -233,11 +234,7 @@ margin-bottom: 15px !important;
 
 .header-text {
   color: #fff;
-  font-size: 25px;
-  font-family:
-  "Open Sans", sans-serif
-  ;
-  
+  font-size: 18px;
 }
 .header-logo-text {
   font-size: 30px;
