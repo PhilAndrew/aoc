@@ -3,17 +3,23 @@ import GuestLayout from './guest-layout';
 import localStyles from './local-styles.css';
 import Select from 'react-select';
 import CatDog from '../resources/img/phil.jpeg';
+import Immegration from '../resources/img/immegration.png';
+
+
+
+
 
 export default class NgoCase extends React.Component {
   
     render() {
       return (
-        <div class="row">
+        <div className="row">
         <div className="col-md-12">
           <div className="border ngo-case">
-            <div>
-            <a href="#">{this.props.title}</a>
-            <a href="#" className="float-right">Icons/Pictures</a>
+            <div className="ngo-case-top-header">
+            <a href="#" className="case-title">{this.props.title}</a>
+            <a href="#" className="float-right">
+            <img alt="test" src={Immegration} /></a>
             </div>
             <div class="case-description">
               <p>{this.props.details}</p>
@@ -25,13 +31,9 @@ export default class NgoCase extends React.Component {
             </div>     
   
             <div>
-                <div class="tagcloud03">
+                <div className="tagcloud03">
                   <ul>
                     <li><a href="#">Immigration<span>20</span></a></li>
-                    <li><a href="#">tag<span>20</span></a></li>
-                    <li><a href="#">tag<span>20</span></a></li>
-                    <li><a href="#">tag<span>20</span></a></li>
-                    <li><a href="#">tag<span>20</span></a></li>
                     <li><a href="#">Lorem ipsum dolor sit amet<span>20</span></a></li>
                   </ul>
                 </div>            

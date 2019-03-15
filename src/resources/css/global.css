@@ -24,11 +24,21 @@ footer.footer a {
 }
 
 .page-heading {
+  font-family:
+  "Open Sans", sans-serif
+  ;
+  
 font-size: 32px;
 line-height: 35px;
 font-weight: bold;
 letter-spacing: -.02em;
-margin-top: 0px;
+margin-top: 6px;
+margin-bottom: 5px !important;
+font-family:medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+font-size:18px;
+border-bottom: 2px solid;
+padding-bottom: 0px;
+margin-bottom: 15px !important;
 }
 
 .bordered {
@@ -57,25 +67,45 @@ margin-top: 0px;
   line-height: 35px;
   font-weight: bold;
   letter-spacing: -.02em;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 6px;
+  margin-bottom: 5px;
+  font-family:medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+font-size:18px;
+border-bottom: 2px solid;
+padding-bottom: 0px;
+margin-bottom: 15px !important;
 }
 
 .centered-content {
   justify-content:center;
 }
 
+.navbar {
+  /*background-image: linear-gradient(-90deg,#333b49,#333b49);*/
+  /*background-image:url(https://s3.amazonaws.com/deskpass-cms/direct_uploads/1551203592_DPYellow.jpeg);*/
+  /*background-color: #77cc6d;*/
+  /*background-color: rgb(229, 236, 237);*/
+  /*background-image: linear-gradient(180deg,#E29502,#E18F6F);*/
+  background-color: #f4f4f0;
+  box-shadow: inset 0 0 0 1rem #f4f4f0;
+}
 
 .navbar-brand {
   /*width: 240px !important;*/
   height: 60px !important;
   margin: 0px !important;
-  padding: 0px !important;
+  padding: 0px;
+  padding-right: 10px;
   
+}
+
+.navbar-item {
+  font-family: Roboto Condensed,sans-serif;
 }
 .navbar-brand .navbar-item {
   margin: 0px !important;
   padding: 0px !important;
+
 }
 
 .navbar-item img {
@@ -85,17 +115,15 @@ margin-top: 0px;
 }
 
 .navbar-item:hover {
-  background-color: #2980b9 !important;
+  background-color: transparent !important;
+  text-decoration: none;
 }
 
 .navbar-expand-lg {
-  background-color: #2980b9;
+  border-bottom: 1px solid #ccc;
 }
 
-.header-text {
-  color: #ecf0f1;
 
-}
 
 .ngo-case {
   padding-left:20px;
@@ -103,6 +131,7 @@ margin-top: 0px;
   margin-bottom:10px;
   padding-bottom:10px;
   padding-top: 5px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
 }
 
 .ngo-case button {
@@ -189,4 +218,65 @@ margin-top: 0px;
   width: 25px;
   height: 2px;
   top: calc(50% + 9px);
+}
+
+
+.case-title {
+  font-family: OpenSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+  font-size: 22px;
+  color: #4a89dc;
+  line-height: 1.5;
+}
+
+.page-middle {
+  background-color: #fcfcfc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.header-text {
+  color: #333;
+  font-size: 18px;
+}
+.header-logo-text {
+  font-size: 30px;
+}
+
+.ngo-case-top-background {
+  height: 40px;
+  background-color: #eee;
+  position: absolute;
+  z-index: 0;
+  left: 16px;
+  right: 16px;
+  top: 1px;
+}
+
+.ngo-case {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.ngo-case-top-header img {
+  height: 150px;
+  overflow:hidden;
+}
+
+.search-left-user-column {
+  background-color: rgb(244, 244, 240);
+  box-shadow: rgb(244, 244, 240) 0px 0px 0px 1rem inset;
+  border-radius: 5px;
+  height: 100%;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+.search-left-user-column .row {
+  margin-top:10px;
+}
+
+button {
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 3px;
 }
