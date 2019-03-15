@@ -86,7 +86,8 @@ margin-bottom: 15px !important;
   /*background-color: #77cc6d;*/
   /*background-color: rgb(229, 236, 237);*/
   /*background-image: linear-gradient(180deg,#E29502,#E18F6F);*/
-  background-color: #f2f2f2;
+  background-color: #f4f4f0;
+  box-shadow: inset 0 0 0 1rem #f4f4f0;
 }
 
 .navbar-brand {
@@ -99,7 +100,7 @@ margin-bottom: 15px !important;
 }
 
 .navbar-item {
-  
+  font-family: Roboto Condensed,sans-serif;
 }
 .navbar-brand .navbar-item {
   margin: 0px !important;
@@ -119,7 +120,7 @@ margin-bottom: 15px !important;
 }
 
 .navbar-expand-lg {
-  border-bottom: 5px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 
@@ -130,6 +131,7 @@ margin-bottom: 15px !important;
   margin-bottom:10px;
   padding-bottom:10px;
   padding-top: 5px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
 }
 
 .ngo-case button {
