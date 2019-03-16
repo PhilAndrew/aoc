@@ -35,6 +35,8 @@ const LawyerCaseList = [
 ]
 
 
+const myTags = ["hi", "there"];
+
 export default class CaseHistory extends React.Component {
 
   render() {
@@ -64,7 +66,24 @@ export default class CaseHistory extends React.Component {
               <LeftUserColumn />
             </div>
             <div className="col-md-9 order-md-1 bordered">
-              <h4 className="mb-3 page-heading">Available cases</h4>
+              <h4 className="mb-3 page-heading">LAWYER: Search cases</h4>
+              {
+                LawyerCaseList.map((element,i) => <LawyerCase key={i} tags={myTags} image={element.image} title={element.title} details={element.details} />)
+              }
+            </div>
+          </div>
+        </div>
+      </GuestLayout>)
+    else if (cookie.getItem('userType') === 'coordinator')
+    return (
+      <GuestLayout>
+        <div className=" p-b-md p-r-md p-l-md">
+          <div className="page-middle container row ">
+            <div className="col-md-3 order-md-1 bordered">
+              <LeftUserColumn />
+            </div>
+            <div className="col-md-9 order-md-1 bordered">
+              <h4 className="mb-3 page-heading">LAW FIRM COORDINATOR: Available cases</h4>
               {
                 LawyerCaseList.map((element,i) => <LawyerCase key={i} image={element.image} title={element.title} details={element.details} />)
               }
@@ -72,10 +91,9 @@ export default class CaseHistory extends React.Component {
           </div>
         </div>
       </GuestLayout>)
-     else 
+     else   
      return (
       <GuestLayout>
       </GuestLayout>)
           }
-
 }
