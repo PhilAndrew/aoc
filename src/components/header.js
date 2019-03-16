@@ -44,8 +44,9 @@ export default class Header extends PureComponent {
     return (
       <div>                
       <a href="#" style={{ float: 'left' }}>
-      <img src={User} alt="User" className="" style={{ width: 35 }} onClick={event => { console.log('account details'); } } />
+      <img src={User} alt="User" className="" style={{ width: 35, marginRight: '8px', marginTop: '3px' }} onClick={event => { console.log('account details'); } } />
       </a>
+      <button type="submit" class="button is-link margin-right-5px login-button">Welcome User</button>
       </div>)
     //else return <div></div>
      /*     <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
