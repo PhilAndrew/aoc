@@ -6,7 +6,7 @@ import CatDog from '../resources/img/phil.jpeg';
 import NgoCase from './ngo-case';
 import LeftUserColumn from './left-user-column';
 
-import Immegration from '../resources/img/immegration.png';
+import Immegration from '../resources/img/immigration.png';
 import DogCat from '../resources/img/dis.png';
 import What from '../resources/img/domesticworker.png'
 

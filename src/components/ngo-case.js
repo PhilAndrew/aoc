@@ -16,7 +16,7 @@ export default class NgoCase extends React.PureComponent {
                 {title}
               </a>
               <a href="#" className="float-right">
-                <img alt="test" src={image} />
+                <img alt="" src={image} />
               </a>
             </div>
             <div class="case-description">
