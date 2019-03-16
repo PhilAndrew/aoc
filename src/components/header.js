@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import User from '../resources/img/user.png';
 // import SearchBar from './search-bar';
+import Authenticator from './fake-authenticator';
 
 export default class Header extends PureComponent {
   constructor(props) {
@@ -36,6 +37,18 @@ export default class Header extends PureComponent {
 
   closeMenuBar() {
     this.setState({ open: false });
+  }
+
+  myWhat() {
+    //if (Authenticator.isLoggedIn())
+    return (<div>                
+      <a href="#" style={{ float: 'left' }}>
+      <img src={User} alt="User" className="" style={{ width: 35 }} onClick={event => { console.log('account details'); } } />
+      </a>
+      <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
+      <p className="header-text">Logout</p>
+    </Link></div>)
+    //else return <div></div>
   }
 
   render() {
@@ -86,16 +99,14 @@ export default class Header extends PureComponent {
             </div>
             {/* <SearchBar /> */}
             <div className="header-right d-inline-flex" style={{ justifyContent: 'flex-end' }}>
-              <div className="w-auto">
+              {/*<div className="w-auto">
                 <form className="form-inline" onSubmit={this.handleSubmit}>
                   <input className="form-control my-0 my-md-3 mr-sm-2 w-auto" type="text" value={value} onChange={this.handleChange} placeholder="Search" />
                   <button className="btn btn-secondary my-0 my-md-3 w-auto" type="submit">Search</button>
                 </form>
-              </div>
+              </div>*/}
               <div className="ml-4 my-0 my-md-3">
-                <a href="#">
-                  <img src={User} alt="User" className="" style={{ width: 35 }} onClick={event => { console.log('account details'); } } />
-                </a>
+                {this.myWhat()}
               </div>
             </div>
           </div>
