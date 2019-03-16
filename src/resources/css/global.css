@@ -292,6 +292,7 @@ background: -moz-linear-gradient(left, rgba(233,232,230,1) 1%, rgba(255,255,255,
 background: -webkit-linear-gradient(left, rgba(233,232,230,1) 1%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to right, rgba(233,232,230,1) 1%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9e8e6', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+height: 1000px;
 }
 
 .tag-button{
