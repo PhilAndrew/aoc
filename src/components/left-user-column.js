@@ -399,14 +399,41 @@ const countries = [
   
 
 const optionsPracticeArea = [
+    { value: 'arbitration', label: 'Arbitration & Dispute Resolution' },
+    { value: 'banking', label: 'Banking and Finance' },
+    { value: 'competition', label: 'Competition' },
+    { value: 'construction', label: 'Construction' },
+    { value: 'corporate', label: 'Corporate' },
+    { value: 'criminal', label: 'Criminal' },
+    { value: 'employment', label: 'Employment' },
+    { value: 'energy', label: 'Energy and Infrastructure' },
+    { value: 'family', label: 'Family' },
+    { value: 'healthcare', label: 'Healthcare and Clinical Negligence' },
     { value: 'immigration', label: 'Immigration' },
-    { value: 'incorporation', label: 'Incorporation' },
-    { value: 'taxexemption', label: 'Tax exemption' },
-    { value: 'courtproceeding', label: 'Court proceeding' },
-    { value: 'documentreview', label: 'Document review' },
-    { value: 'research', label: 'Research' },
-  ];
+    { value: 'insolvency', label: 'Insolvency' },
+    { value: 'insurance', label: 'Insurance' },
+    { value: 'intellectual', label: 'Intellectual Property' },
+    { value: 'litigation', label: 'Litigation' },
+    { value: 'media', label: 'Media' },
+    { value: 'privacy', label: 'Privacy' },
+    { value: 'property', label: 'Property' },
+    { value: 'public', label: 'Public Sector' },
+    { value: 'shipping', label: 'Shipping and Maritime' },
+    { value: 'sports', label: 'Sports' },
+    { value: 'tax', label: 'Tax' },
+    { value: 'technology', label: 'Technology' },
+    { value: 'wills', label: 'Wills, Trust and Probate' },
+];
   
+
+const legalSkillsOptions = [
+    { value: 'advice', label: 'Advice' },
+    { value: 'draft', label: 'Draft/Review Legal Documentation' },
+    { value: 'direct', label: 'Direct Representation' },
+    { value: 'research', label: 'Research' },
+    { value: 'training', label: 'Training' },    
+];
+
   class PracticeAreaSelect extends React.Component {
     state = {
       selectedOption: null,
@@ -455,6 +482,30 @@ class JurisdictionSelect extends React.Component {
   }
   
 
+  class LegalSkillsSelect extends React.Component {
+    state = {
+      selectedOption: null,
+    }
+    handleChange = (selectedOption) => {
+      this.setState({ selectedOption });
+      console.log(`Option selected:`, selectedOption);
+    }
+    render() {
+      const { selectedOption } = this.state;
+  
+      return (
+        <Select
+          value={selectedOption}
+          onChange={this.handleChange}
+          options={legalSkillsOptions}
+          isMulti={true}
+        />
+      );
+    }
+  }
+  
+  
+
 export default class LeftUserColumn extends React.Component {
   
     render() {
@@ -488,7 +539,7 @@ export default class LeftUserColumn extends React.Component {
         <div className="row">
         <div className="col-md-12">
         <label htmlFor="practice-area">Legal Skill</label>
-        <JurisdictionSelect />
+        <LegalSkillsSelect />
         </div></div>
 
         <div className="row">
