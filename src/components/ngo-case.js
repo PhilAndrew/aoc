@@ -34,13 +34,11 @@ export default class NgoCase extends React.PureComponent {
                   <li>
                     <a href="#">
                       Immigration
-                      <span>20</span>
                     </a>
                   </li>
                   <li>
                     <a href="#">
                       Lorem ipsum dolor sit amet
-                      <span>20</span>
                     </a>
                   </li>
                 </ul>
