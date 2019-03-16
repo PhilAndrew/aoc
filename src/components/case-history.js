@@ -10,6 +10,7 @@ import LawyerCase from './lawyer-case';
 import Immigration from '../resources/img/immigration.png';
 import What from '../resources/img/dis.png';
 import DomesticWorker from '../resources/img/domesticworker.png';
+import CaseList from './case-list';
 
 
 const NgoCaseList = [
@@ -37,22 +38,17 @@ const LawyerCaseList = [
 export default class CaseHistory extends React.Component {
   constructor(props) {
     super(props);
-    let loggedIn = false;
     let caseList = [];
     if (cookie.getItem('userType') === 'ngo') {
-      loggedIn = true;
       caseList = NgoCaseList;
     }
     if (cookie.getItem('userType') === 'lawyer') {
-      loggedIn = true;
       caseList = LawyerCaseList;
     }
     if (cookie.getItem('userType') === 'coordinator') {
-      loggedIn = true;
       caseList = LawyerCaseList;
     }
     this.state = {
-      loggedIn,
       caseList,
       searchField: '',
       practiceAreas: [],
@@ -95,35 +91,35 @@ export default class CaseHistory extends React.Component {
     if (practiceAreas.length > 0) {
       filteredCases = filteredCases.filter((cases) => {
         for(let i=0; i<practiceAreas.length; i++) {
-          return cases.practiceArea.includes(practiceAreas[i].value)
+          return cases.practiceArea.includes(practiceAreas[i].value);
         }
       });
     }
     if (legalSkills.length > 0) {
       filteredCases = filteredCases.filter((cases) => {
         for(let i=0; i<legalSkills.length; i++) {
-          return cases.legalSkill.includes(legalSkills[i].value)
+          return cases.legalSkill.includes(legalSkills[i].value);
         }
       });
     }
     if (jurisdictions.length > 0) {
       filteredCases = filteredCases.filter((cases) => {
         for(let i=0; i<jurisdictions.length; i++) {
-          return cases.jurisdictions.includes(jurisdictions[i].value)
+          return cases.jurisdictions.includes(jurisdictions[i].value);
         }
       });
     }
     if (languages.length > 0) {
       filteredCases = filteredCases.filter((cases) => {
         for(let i=0; i<languages.length; i++) {
-          return cases.languages.includes(languages[i].value)
+          return cases.languages.includes(languages[i].value);
         }
       });
     }
     if (priorities.length > 0) {
       filteredCases = filteredCases.filter((cases) => {
         for(let i=0; i<priorities.length; i++) {
-          return cases.priority.includes(priorities[i].value)
+          return cases.priority.includes(priorities[i].value);
         }
       });
     }
@@ -137,9 +133,7 @@ export default class CaseHistory extends React.Component {
             </div>
             <div className='col-md-9 order-md-1 bordered'>
               <h4 className='mb-3 page-heading'>Available cases</h4>
-              {
-                filteredCases.map((element, i) => <NgoCase key={i} element={element}/>)
-              }
+              <CaseList allCases={filteredCases} />
             </div>
           </div>
         </div>
@@ -155,9 +149,7 @@ export default class CaseHistory extends React.Component {
               </div>
               <div className='col-md-9 order-md-1 bordered'>
                 <h4 className='mb-3 page-heading'>LAWYER: Search cases</h4>
-                {
-                  filteredCases.map((element,i) => <LawyerCase key={i} element={element} />)
-                }
+                <CaseList allCases={filteredCases} />
               </div>
             </div>
           </div>
@@ -173,9 +165,7 @@ export default class CaseHistory extends React.Component {
               </div>
               <div className='col-md-9 order-md-1 bordered'>
                 <h4 className='mb-3 page-heading'>LAW FIRM COORDINATOR: Available cases</h4>
-                {
-                  filteredCases.map((element,i) => <LawyerCase key={i} element={element} />)
-                }
+                <CaseList allCases={filteredCases} />
               </div>
             </div>
           </div>

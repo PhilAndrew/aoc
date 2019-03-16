@@ -10,19 +10,32 @@ const optionsPracticeArea = require('../resources/json/optionsPracticeArea').def
 const optionsLegalSkill = require('../resources/json/optionsLegalSkill').default.optionsLegalSkill;
 const prioritySelect = require('../resources/json/prioritySelect').default.prioritySelect;
 
-export default class NgoCase extends React.PureComponent {
+export default class NgoCase extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: props.element.title,
-      image: props.element.image,
-      details: props.element.details,
-      priority: props.element.priority,
-      practiceArea: props.element.practiceArea,
-      legalSkill: props.element.legalSkill,
-      jurisdictions: props.element.jurisdictions,
-      languages: props.element.languages
+      title: props.singleCase.title,
+      image: props.singleCase.image,
+      details: props.singleCase.details,
+      priority: props.singleCase.priority,
+      practiceArea: props.singleCase.practiceArea,
+      legalSkill: props.singleCase.legalSkill,
+      jurisdictions: props.singleCase.jurisdictions,
+      languages: props.singleCase.languages
     };
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.setState({
+      title: newProps.singleCase.title,
+      image: newProps.singleCase.image,
+      details: newProps.singleCase.details,
+      priority: newProps.singleCase.priority,
+      practiceArea: newProps.singleCase.practiceArea,
+      legalSkill: newProps.singleCase.legalSkill,
+      jurisdictions: newProps.singleCase.jurisdictions,
+      languages: newProps.singleCase.languages
+    });
   }
 
   renderPracticeArea = () => {
@@ -38,9 +51,9 @@ export default class NgoCase extends React.PureComponent {
             }
           }
           return (
-            <a href="#" key={key} className="tag-button">
+            <p key={key} className="tag-button">
               {optionsPracticeArea[index].label}
-            </a>
+            </p>
           );
         })
       );
@@ -60,9 +73,9 @@ export default class NgoCase extends React.PureComponent {
             }
           }
           return (
-            <a href="#" key={key} className="tag-button">
+            <p key={key} className="tag-button">
               {optionsLegalSkill[index].label}
-            </a>
+            </p>
           );
         })
       );
@@ -75,9 +88,9 @@ export default class NgoCase extends React.PureComponent {
       return (
         jurisdictions.map((tag, key) => {
           return (
-            <a href="#" key={key} className="tag-button">
+            <p key={key} className="tag-button">
               {tag}
-            </a>
+            </p>
           );
         })
       );
@@ -90,9 +103,9 @@ export default class NgoCase extends React.PureComponent {
       return (
         languages.map((tag, key) => {
           return (
-            <a href="#" key={key} className="tag-button">
+            <p key={key} className="tag-button">
               {tag}
-            </a>
+            </p>
           );
         })
       );
@@ -110,15 +123,16 @@ export default class NgoCase extends React.PureComponent {
     }
     let priorityTag = prioritySelect[index].label;
     return (
-      <a href="#" className="tag-button">
+      <p className="tag-button">
         {priorityTag}
-      </a>
+      </p>
     );
   }
 
 
   render() {
     const { title, details, image } = this.state;
+    console.log(this.state);
     return (
       <div className="row">
         <div className="col-md-12">
@@ -128,7 +142,7 @@ export default class NgoCase extends React.PureComponent {
                 {title}
               </a>
               <a href="#" className="float-right">
-                <img alt="" src={image} />
+                <img alt="" src={image} className="rounded img-fluid mt-lg-4" />
               </a>
             </div>
             <div className="case-description">

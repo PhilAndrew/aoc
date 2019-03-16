@@ -287,15 +287,6 @@ height: 1000px;
     background-color 0.25s ease-in,
     transform 0.3s ease-out;
 }
-.tag-button:hover{
-  cursor: pointer;
-  
-  color: white;
-  background-color: #1976D2;
-}
-.tag-button:active{
-  transform: scale(0.95);
-}
 
 
 @media (max-width: 977px) {
@@ -332,6 +323,8 @@ height: 1000px;
   min-width: 4em;
   padding-left: 1em;
   padding-right: 1em;
+  padding-top: 0.15em;
+  padding-bottom: 0.2em;
   margin-left:0em;
   margin-right:0.5em;
   margin-top:0em;
@@ -344,7 +337,7 @@ height: 1000px;
 .buttonCaseList:active {
   -webkit-animation: active 1200ms ease 1 alternate;
   animation: active 1200ms ease 1 alternate; 
-  background: #5F9BE0;
+  background: rgb(18, 91, 163);
 }
 .grayButtonCaseList { background: #D2D2D2; }
 .grayButtonCaseList:active { background: #b9b9b9; }
