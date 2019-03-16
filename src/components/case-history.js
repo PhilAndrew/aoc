@@ -81,7 +81,7 @@ export default class CaseHistory extends React.Component {
             <div className="col-md-9 order-md-1 bordered">
               <h4 className="mb-3 page-heading">Available cases</h4>
               {
-                filteredCases.map((element, i) => <NgoCase key={i} image={element.image} title={element.title} details={element.details} />)
+                filteredCases.map((element, i) => <NgoCase key={i} tags={myTags} image={element.image} title={element.title} details={element.details} />)
               }
             </div>
           </div>
