@@ -470,7 +470,7 @@ export default class LeftUserColumn extends React.Component {
 
         <div className="row">
         <div className="col-md-12">
-        <label htmlFor="practice-area">Legal Practice Area</label>
+        <label htmlFor="practice-area">Practice Area</label>
         <PracticeAreaSelect />
         </div></div>
         <div className="row">
@@ -479,6 +479,23 @@ export default class LeftUserColumn extends React.Component {
         <JurisdictionSelect />
         </div></div>
 
+        <div className="row">
+        <div className="col-md-12">
+        <label htmlFor="practice-area">Priority</label>
+        <JurisdictionSelect />
+        </div></div>
+
+        <div className="row">
+        <div className="col-md-12">
+        <label htmlFor="practice-area">Legal Skill</label>
+        <JurisdictionSelect />
+        </div></div>
+
+        <div className="row">
+        <div className="col-md-12">
+        <label htmlFor="practice-area">Language</label>
+        <JurisdictionSelect />
+        </div></div>
 
         <div className="row">
         <div className="col-md-12">
