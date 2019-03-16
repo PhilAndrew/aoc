@@ -4,18 +4,31 @@ import localStyles from './local-styles.css';
 import Select from 'react-select';
 import CatDog from '../resources/img/phil.jpeg';
 
-export default class LawyerCase extends React.Component {
+class ApplyCaseRender extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      applied: false
     }
   }
 
   handleChange = () => {
-
+    this.setState({
+      applied: true
+    })
   }
 
+  render() {
+    if (!this.state.applied) {
+      return(
+        <button className="" type="submit" onClick={this.handleChange}>Apply Case</button>
+      )
+    }
+    return(<button className="" type="submit" disabled>Pending</button>)    
+  }
+}
+
+export default class LawyerCase extends React.Component {
   render() {
     const { title, details, image, tags } = this.props;
     return (
@@ -35,7 +48,7 @@ export default class LawyerCase extends React.Component {
             </div>
 
             <div className="buttons">
-              <button className="" type="submit">Apply Case</button>
+              <ApplyCaseRender />
             </div>
             <div>
               <div className="tagcloud03">
