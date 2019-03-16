@@ -41,14 +41,16 @@ export default class Header extends PureComponent {
 
   myWhat() {
     //if (Authenticator.isLoggedIn())
-    return (<div>                
+    return (<div></div>)/*
+      <div>                
       <a href="#" style={{ float: 'left' }}>
       <img src={User} alt="User" className="" style={{ width: 35 }} onClick={event => { console.log('account details'); } } />
       </a>
-      <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
-      <p className="header-text">Logout</p>
-    </Link></div>)
+      </div>)
     //else return <div></div>
+          <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
+      <p className="header-text">Logout</p>
+    </Link>*/
   }
 
   render() {

@@ -89,21 +89,21 @@ export default class AocLogin extends React.Component {
     }
 
     loginUser(e) {
-      if (this.state.userNameValue === 'ngo') {
+      if (this.state.userNameValue.toLowerCase() === 'ngo') {
         cookie.setItem('secretKey', 'allowmein');
         cookie.setItem('userType', 'ngo');
         this.setState({
           loggedIn: true,
         });
       } else
-      if (this.state.userNameValue === 'coordinator') {
+      if (this.state.userNameValue.toLowerCase() === 'coordinator') {
         cookie.setItem('secretKey', 'allowmein');
         cookie.setItem('userType', 'coordinator');
         this.setState({
           loggedIn: true,
         });
       } else
-      if (this.state.userNameValue === 'lawyer') {
+      if (this.state.userNameValue.toLowerCase() === 'lawyer') {
         cookie.setItem('secretKey', 'allowmein');
         cookie.setItem('userType', 'lawyer');
         this.setState({
@@ -162,6 +162,7 @@ export default class AocLogin extends React.Component {
         <section className="row">
         <div className="col-md-4 section_title animated wow fadeInUp">
                 <h2>User login.</h2>
+                <p>Login with user name as ngo or coordinator or lawyer with any password.</p>
               </div>          
         <div className="col-md-6">
         <div className="field">
