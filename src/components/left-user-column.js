@@ -478,6 +478,13 @@ export default class LeftUserColumn extends React.Component {
         <label htmlFor="practice-area">Jurisdiction</label>
         <JurisdictionSelect />
         </div></div>
+
+
+        <div className="row">
+        <div className="col-md-12">
+        <button class="btn btn-secondary my-0 my-md-3 w-auto" type="submit">Search</button>
+        </div></div>
+
         </div></div>
         </div>
     }
