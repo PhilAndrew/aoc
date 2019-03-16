@@ -24,7 +24,6 @@ export default class LawyerCase extends React.PureComponent {
             </div>
 
             <div className="buttons">
-              <button className="" type="submit">Details</button>
               <button className="" type="submit">Apply Case</button>
             </div>
             <div>
