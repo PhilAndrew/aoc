@@ -18,7 +18,6 @@ export default () => (
             </div>
           </section>
           <AocLogin />
-          <CardBoxes />
         </div>
       </div>
     </section>

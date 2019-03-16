@@ -16,6 +16,10 @@ export default class Header extends PureComponent {
 
   render() {
     return (
+      <div>
+        <div className="row">
+        <div style={{ boxShadow: '0 .15rem 1.75rem 0 rgba(33,37,41,.15)!important' }}>test</div>
+        </div>
       <div className="row" style={{ marginTop: '0.5em', marginBottom: '1em' }}>
         <Link to="/" className="col-3">
           <div className="card border-primary" onFocus={this.onCardHover} style={{ maxWidth: '20em' }}>
@@ -46,6 +50,7 @@ export default class Header extends PureComponent {
             </div>
           </div>
         </Link>
+      </div>
       </div>
     );
   }
