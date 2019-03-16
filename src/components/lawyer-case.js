@@ -4,7 +4,18 @@ import localStyles from './local-styles.css';
 import Select from 'react-select';
 import CatDog from '../resources/img/phil.jpeg';
 
-export default class LawyerCase extends React.PureComponent {
+export default class LawyerCase extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      
+    }
+  }
+
+  handleChange = () => {
+
+  }
+
   render() {
     const { title, details, image, tags } = this.props;
     return (
@@ -25,18 +36,19 @@ export default class LawyerCase extends React.PureComponent {
 
             <div className="buttons">
               <button className="" type="submit">Details</button>
-              <button className="" type="submit">Apply Case</button>
+              <button className="" type="submit" onClick={this.handleChange}>Apply Case</button>
             </div>
             <div>
               <div className="tagcloud03">
                 <ul>
                     {tags.map((tag) =>
-                  <li>
-                    <a href="#">
-                      {tag}
-                      <span>20</span>
-                    </a>
-                    </li>)}
+                      <li>
+                        <a href="#">
+                          {tag}
+                          <span>20</span>
+                        </a>
+                      </li>
+                    )}
                 </ul>
               </div>
             </div>

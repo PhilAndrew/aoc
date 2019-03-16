@@ -563,6 +563,10 @@ export default () => (
             <input type="text" className="form-control" id="title" placeholder="" required />
           </div>
           <div className="mb-3">
+            <label htmlFor="client">Client Name</label>
+            <input type="text" className="form-control" id="client" placeholder="" required />
+          </div>
+          <div className="mb-3">
             <label htmlFor="practice-area">Practice Area</label>
             <PracticeAreaSelect />
           </div>
