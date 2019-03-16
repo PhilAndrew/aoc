@@ -28,7 +28,7 @@ class ApplyCaseRender extends React.Component {
   }
 }
 
-export default class LawyerCase extends React.Component {
+export default class LawyerCase extends React.PureComponent {
   render() {
     const { title, details, image, tags } = this.props;
     return (
@@ -51,17 +51,12 @@ export default class LawyerCase extends React.Component {
               <ApplyCaseRender />
             </div>
             <div>
-              <div className="tagcloud03">
-                <ul>
-                    {tags.map((tag) =>
-                      <li>
-                        <a href="#">
-                          {tag}
-                          <span>20</span>
-                        </a>
-                      </li>
-                    )}
-                </ul>
+              <div className="tags-grid">
+                {tags.map((tag) =>
+                  <a href="#" className="tag-button">
+                    {tag}
+                  </a>
+                )}
               </div>
             </div>
           </div>
