@@ -19,8 +19,6 @@ export default () => (
           </section>
           <AocLogin />
           <CardBoxes />
-
-          <AocLogin />
         </div>
       </div>
     </section>
