@@ -263,6 +263,7 @@ margin-bottom: 15px !important;
 }
 
 .search-left-user-column {
+  
   background-color: rgb(244, 244, 240);
   box-shadow: rgb(244, 244, 240) 0px 0px 0px 1rem inset;
   border-radius: 5px;
@@ -276,7 +277,7 @@ margin-bottom: 15px !important;
 }
 
 button {
-  border: 1px solid #000;
+  border: 2px solid rgb(0, 121, 211);
   background-color: #fff;
   border-radius: 3px;
 }

@@ -3,7 +3,7 @@ import GuestLayout from './guest-layout';
 import localStyles from './local-styles.css';
 import Select from 'react-select';
 import CatDog from '../resources/img/phil.jpeg';
-import Immegration from '../resources/img/immegration.png';
+
 
 
 
@@ -19,7 +19,7 @@ export default class NgoCase extends React.Component {
             <div className="ngo-case-top-header">
             <a href="#" className="case-title">{this.props.title}</a>
             <a href="#" className="float-right">
-            <img alt="test" src={Immegration} /></a>
+            <img alt="test" src={this.props.image} /></a>
             </div>
             <div class="case-description">
               <p>{this.props.details}</p>
