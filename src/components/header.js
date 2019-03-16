@@ -41,14 +41,14 @@ export default class Header extends PureComponent {
 
   myWhat() {
     //if (Authenticator.isLoggedIn())
-    return (<div></div>)/*
+    return (
       <div>                
       <a href="#" style={{ float: 'left' }}>
       <img src={User} alt="User" className="" style={{ width: 35 }} onClick={event => { console.log('account details'); } } />
       </a>
       </div>)
     //else return <div></div>
-          <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
+     /*     <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
       <p className="header-text">Logout</p>
     </Link>*/
   }
@@ -95,12 +95,9 @@ export default class Header extends PureComponent {
               <Link className="navbar-item" to="/case-history" onClick={() => this.closeMenuBar()}>
                 <p className="header-text">Cases</p>
               </Link>
-              <Link className="navbar-item" to="/typescript-counter" onClick={() => this.closeMenuBar()}>
-                <p className="header-text">Help</p>
-              </Link>
             </div>
             {/* <SearchBar /> */}
-            <div className="header-right d-inline-flex" style={{ justifyContent: 'flex-end' }}>
+            <div className="header-right d-inline-flex" style={{ justifyContent: 'flex-end', float: 'right', marginRight: '15px' }}>
               {/*<div className="w-auto">
                 <form className="form-inline" onSubmit={this.handleSubmit}>
                   <input className="form-control my-0 my-md-3 mr-sm-2 w-auto" type="text" value={value} onChange={this.handleChange} placeholder="Search" />
