@@ -160,11 +160,11 @@ export default class AocLogin extends React.Component {
     return (
         <div>
         <section className="row">
-        <div className="col-md-6 section_title animated wow fadeInUp">
+        <div className="col-md-7 section_title animated wow fadeInUp">
                 <h2>User login.</h2>
                 <p>Login with user name as ngo or coordinator or lawyer with any password.</p>
               </div>          
-        <div className="col-md-4">
+        <div className="col-md-3 user-login-area">
         <div className="field">
                 <label className="label" htmlFor="username">
                   Username
