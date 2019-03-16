@@ -33,6 +33,7 @@ export default class AocLogin extends React.Component {
 
   logout(e) {
     cookie.setItem('secretKey', '');
+    cookie.setItem('userType', '');
     this.setState({
         loggedIn: false,
       });
@@ -58,6 +59,7 @@ export default class AocLogin extends React.Component {
 
   loginNgo(e) {
     cookie.setItem('secretKey', 'allowmein');
+    cookie.setItem('userType', 'ngo');
         this.setState({
         loggedIn: true,
       });
@@ -66,6 +68,7 @@ export default class AocLogin extends React.Component {
 
   loginLawFirmCoordinator(e) {
     cookie.setItem('secretKey', 'allowmein');
+    cookie.setItem('userType', 'coordinator');
     this.setState({
         loggedIn: true,
       });
@@ -74,6 +77,7 @@ export default class AocLogin extends React.Component {
 
   loginLawyer(e) {
     cookie.setItem('secretKey', 'allowmein');
+    cookie.setItem('userType', 'lawyer');
     this.setState({
         loggedIn: true,
       });
