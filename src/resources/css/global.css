@@ -296,3 +296,11 @@ height: 1000px;
 .tag-button:active{
   transform: scale(0.95);
 }
+
+
+@media (max-width: 977px) {
+.hideme-when-narrow {
+  display: none;
+}
+}
+
