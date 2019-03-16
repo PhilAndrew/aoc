@@ -13,29 +13,26 @@ import DomesticWorker from '../resources/img/domesticworker.png';
 
 
 const NgoCaseList = [
-  {"image":Immigration,"title":"Document authentication - Sri Lanka","details":"We require a Sri Lankan expert to authenticate an extract from the Information Book of of a Police Station in Negombo."},
-  {"image":What,"title":"Action Against Prohibited Conduct","details":"Support a lawyer who wants to set up a non-profit legal entity or social enterprise in Singapore focused on supporting employees of international organizations who have experienced sexual harassment, discrimination and abuse with pro bono legal advice"},
-  {"image":DomesticWorker,"title":"Active Global Caregiver","details":"Assist a company that ethically sources foreign domestic workers by providing pro bono legal assistance on setting up a charitable legal entity in order to extend their services to low-income families in Hong Kong"},
-  {"image":Immigration,"title":"Mender of Things","details":"Help a young and passionate NGO increase youth awareness of the law and human rights through the arts by providing legal advice and assistance on setting up a legal entity in Hong Kong and applying for section 88 charitable status"},
-  {"image":Immigration,"title":"Serving Islam Team - Hong Kong","details":"Assist a local NGO that helps educate the community on ethnic minorities and which also helps ethnic minorities integrate into the community by providing pro bono legal advice on the appropriate legal entity structure and possible application for section 88 charitable status"},
-  {"image":Immigration,"title":"StoryTaler","details":"Assist a volunteer group focused on promoting mental health in Hong Kong by providing pro bono legal assistance on setting up a legal entity and applying for section 88 charitable status"},
-  {"image":Immigration,"title":"V Cycle","details":"Support a social enterprise focused on environmental issues by providing pro bono legal advice on setting up a board and formalizing its shareholder arrangements"},
-  {"image":Immigration,"title":"OurConservatory","details":"Assist an impact investing intermediary with a mission to bridge the gap between social &amp; commercial by establishing a long term legal partnership to support their Tech for Good incubator programme (NEW!)"}
+  {image: Immigration, title: 'Document authentication - Sri Lanka', details: 'We require a Sri Lankan expert to authenticate an extract from the Information Book of of a Police Station in Negombo.', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' },
+  {image: What, title: 'Action Against Prohibited Conduct', details: 'Support a lawyer who wants to set up a non-profit legal entity or social enterprise in Singapore focused on supporting employees of international organizations who have experienced sexual harassment,  discrimination and abuse with pro bono legal advice', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: DomesticWorker, title: 'Active Global Caregiver', details: 'Assist a company that ethically sources foreign domestic workers by providing pro bono legal assistance on setting up a charitable legal entity in order to extend their services to low-income families in Hong Kong', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: Immigration, title: 'Mender of Things', details: 'Help a young and passionate NGO increase youth awareness of the law and human rights through the arts by providing legal advice and assistance on setting up a legal entity in Hong Kong and applying for section 88 charitable status', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: Immigration, title: 'Serving Islam Team - Hong Kong', details: 'Assist a local NGO that helps educate the community on ethnic minorities and which also helps ethnic minorities integrate into the community by providing pro bono legal advice on the appropriate legal entity structure and possible application for section 88 charitable status', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: Immigration, title: 'StoryTaler', details: 'Assist a volunteer group focused on promoting mental health in Hong Kong by providing pro bono legal assistance on setting up a legal entity and applying for section 88 charitable status', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: Immigration, title: 'V Cycle', details: 'Support a social enterprise focused on environmental issues by providing pro bono legal advice on setting up a board and formalizing its shareholder arrangements', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: Immigration, title: 'OurConservatory', details: 'Assist an impact investing intermediary with a mission to bridge the gap between social &amp; commercial by establishing a long term legal partnership to support their Tech for Good incubator programme (NEW!)', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }
 ]
 
 const LawyerCaseList = [
-  {"image":Immigration,"title":"Document authentication - Sri Lanka","details":"We require a Sri Lankan expert to authenticate an extract from the Information Book of of a Police Station in Negombo."},
-  {"image":What,"title":"Action Against Prohibited Conduct","details":"Support a lawyer who wants to set up a non-profit legal entity or social enterprise in Singapore focused on supporting employees of international organizations who have experienced sexual harassment, discrimination and abuse with pro bono legal advice"},
-  {"image":DomesticWorker,"title":"Active Global Caregiver","details":"Assist a company that ethically sources foreign domestic workers by providing pro bono legal assistance on setting up a charitable legal entity in order to extend their services to low-income families in Hong Kong"},
-  {"image":Immigration,"title":"Mender of Things","details":"Help a young and passionate NGO increase youth awareness of the law and human rights through the arts by providing legal advice and assistance on setting up a legal entity in Hong Kong and applying for section 88 charitable status"},
-  {"image":Immigration,"title":"Serving Islam Team - Hong Kong","details":"Assist a local NGO that helps educate the community on ethnic minorities and which also helps ethnic minorities integrate into the community by providing pro bono legal advice on the appropriate legal entity structure and possible application for section 88 charitable status"},
-  {"image":Immigration,"title":"StoryTaler","details":"Assist a volunteer group focused on promoting mental health in Hong Kong by providing pro bono legal assistance on setting up a legal entity and applying for section 88 charitable status"},
-  {"image":Immigration,"title":"V Cycle","details":"Support a social enterprise focused on environmental issues by providing pro bono legal advice on setting up a board and formalizing its shareholder arrangements"},
-  {"image":Immigration,"title":"OurConservatory","details":"Assist an impact investing intermediary with a mission to bridge the gap between social &amp; commercial by establishing a long term legal partnership to support their Tech for Good incubator programme (NEW!)"}
+  {image: Immigration, title: 'Document authentication - Sri Lanka', details: 'We require a Sri Lankan expert to authenticate an extract from the Information Book of of a Police Station in Negombo.', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' },
+  {image: What, title: 'Action Against Prohibited Conduct', details: 'Support a lawyer who wants to set up a non-profit legal entity or social enterprise in Singapore focused on supporting employees of international organizations who have experienced sexual harassment,  discrimination and abuse with pro bono legal advice', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: DomesticWorker, title: 'Active Global Caregiver', details: 'Assist a company that ethically sources foreign domestic workers by providing pro bono legal assistance on setting up a charitable legal entity in order to extend their services to low-income families in Hong Kong', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: Immigration, title: 'Mender of Things', details: 'Help a young and passionate NGO increase youth awareness of the law and human rights through the arts by providing legal advice and assistance on setting up a legal entity in Hong Kong and applying for section 88 charitable status', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: Immigration, title: 'Serving Islam Team - Hong Kong', details: 'Assist a local NGO that helps educate the community on ethnic minorities and which also helps ethnic minorities integrate into the community by providing pro bono legal advice on the appropriate legal entity structure and possible application for section 88 charitable status', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: Immigration, title: 'StoryTaler', details: 'Assist a volunteer group focused on promoting mental health in Hong Kong by providing pro bono legal assistance on setting up a legal entity and applying for section 88 charitable status'}, 
+  {image: Immigration, title: 'V Cycle', details: 'Support a social enterprise focused on environmental issues by providing pro bono legal advice on setting up a board and formalizing its shareholder arrangements', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }, 
+  {image: Immigration, title: 'OurConservatory', details: 'Assist an impact investing intermediary with a mission to bridge the gap between social &amp; commercial by establishing a long term legal partnership to support their Tech for Good incubator programme (NEW!)', practiceArea: ['environmental', 'insurance'], legalSkill: ['advocacy', 'draft'], jurisdictions: ['Hong Kong'], languages: ['French', 'English'], priority: 'immediate' }
 ]
-
-
-const myTags = ["hi", "there"];
 
 export default class CaseHistory extends React.Component {
   constructor(props) {
@@ -57,7 +54,12 @@ export default class CaseHistory extends React.Component {
     this.state = {
       loggedIn,
       caseList,
-      searchField: ''
+      searchField: '',
+      practiceAreas: [],
+      legalSkills: [],
+      jurisdictions: [],
+      languages: [],
+      priorities: []
     };
   }
 
@@ -65,73 +67,131 @@ export default class CaseHistory extends React.Component {
     this.setState({ searchField: event.target.value });
   }
 
+  onPracticeAreaChange = (event) => {
+    this.setState({ practiceAreas: event });
+    console.log('practice areas', event);
+  }
+
+  onLegalSkillChange = (event) => {
+    this.setState({ legalSkills: event });
+    console.log('legal skills', event);
+  }
+
+  onJurisdictionChange = (event) => {
+    this.setState({ jurisdictions: event });
+    console.log('jurisdictions', event);
+  }
+
+  onLanguageChange = (event) => {
+    this.setState({ languages: event });
+    console.log('languages', event);
+  }
+
+  onPriorityChange = (event) => {
+    this.setState({ priorities: event });
+    console.log('priority', event);
+  }
+
   render() {
-    const { caseList, searchField } = this.state;
-    const filteredCases = caseList.filter((cases) => {
-      return cases.title.toLowerCase().includes(searchField.toLowerCase())
+    const { caseList, searchField, practiceAreas, legalSkills, jurisdictions, languages, priorities } = this.state;
+    let filteredCases = caseList.filter((cases) => {
+      return cases.title.toLowerCase().includes(searchField.toLowerCase());
     });
+    if (practiceAreas.length > 0) {
+      filteredCases = filteredCases.filter((cases) => {
+        for(let i=0; i<practiceAreas.length; i++) {
+          return cases.practiceArea.includes(practiceAreas[i].value)
+        }
+      });
+    }
+    if (legalSkills.length > 0) {
+      filteredCases = filteredCases.filter((cases) => {
+        for(let i=0; i<legalSkills.length; i++) {
+          return cases.legalSkill.includes(legalSkills[i].value)
+        }
+      });
+    }
+    if (jurisdictions.length > 0) {
+      filteredCases = filteredCases.filter((cases) => {
+        for(let i=0; i<jurisdictions.length; i++) {
+          return cases.jurisdictions.includes(jurisdictions[i].value)
+        }
+      });
+    }
+    if (languages.length > 0) {
+      filteredCases = filteredCases.filter((cases) => {
+        for(let i=0; i<languages.length; i++) {
+          return cases.languages.includes(languages[i].value)
+        }
+      });
+    }
+    if (priorities.length > 0) {
+      filteredCases = filteredCases.filter((cases) => {
+        for(let i=0; i<priorities.length; i++) {
+          return cases.priority.includes(priorities[i].value)
+        }
+      });
+    }
     if (cookie.getItem('userType') === 'ngo') {
       return (
       <GuestLayout>
-        <div className=" p-b-md p-r-md p-l-md">
-          <div className="page-middle container row ">
-            <div className="col-md-3 order-md-1 bordered">
-              <LeftUserColumn searchChange={this.onSearchChange} />
+        <div className=' p-b-md p-r-md p-l-md'>
+          <div className='page-middle container row '>
+            <div className='col-md-3 order-md-1 bordered'>
+              <LeftUserColumn searchChange={this.onSearchChange} practiceAreaChange={this.onPracticeAreaChange} legalSkillChange={this.onLegalSkillChange} jurisdictionChange={this.onJurisdictionChange} languageChange={this.onLanguageChange} priorityChange={this.onPriorityChange} />
             </div>
-            <div className="col-md-9 order-md-1 bordered">
-              <h4 className="mb-3 page-heading">Available cases</h4>
+            <div className='col-md-9 order-md-1 bordered'>
+              <h4 className='mb-3 page-heading'>Available cases</h4>
               {
-                filteredCases.map((element, i) => <NgoCase key={i} tags={myTags} image={element.image} title={element.title} details={element.details} />)
+                filteredCases.map((element, i) => <NgoCase key={i} element={element}/>)
               }
             </div>
           </div>
         </div>
       </GuestLayout>
-      )
-    }
-    else if (cookie.getItem('userType') === 'lawyer') {
+      );
+    } else if (cookie.getItem('userType') === 'lawyer') {
       return (
         <GuestLayout>
-          <div className=" p-b-md p-r-md p-l-md">
-            <div className="page-middle container row ">
-              <div className="col-md-3 order-md-1 bordered">
-                <LeftUserColumn searchChange={this.onSearchChange} />
+          <div className=' p-b-md p-r-md p-l-md'>
+            <div className='page-middle container row '>
+              <div className='col-md-3 order-md-1 bordered'>
+                <LeftUserColumn searchChange={this.onSearchChange} practiceAreaChange={this.onPracticeAreaChange} legalSkillChange={this.onLegalSkillChange} jurisdictionChange={this.onJurisdictionChange} languageChange={this.onLanguageChange} priorityChange={this.onPriorityChange} />
               </div>
-              <div className="col-md-9 order-md-1 bordered">
-                <h4 className="mb-3 page-heading">LAWYER: Search cases</h4>
+              <div className='col-md-9 order-md-1 bordered'>
+                <h4 className='mb-3 page-heading'>LAWYER: Search cases</h4>
                 {
-                  filteredCases.map((element,i) => <LawyerCase key={i} tags={myTags} image={element.image} title={element.title} details={element.details} />)
+                  filteredCases.map((element,i) => <LawyerCase key={i} element={element} />)
                 }
               </div>
             </div>
           </div>
         </GuestLayout>
-      )
-    }
-    else if (cookie.getItem('userType') === 'coordinator') {
+      );
+    } else if (cookie.getItem('userType') === 'coordinator') {
       return (
         <GuestLayout>
-          <div className=" p-b-md p-r-md p-l-md">
-            <div className="page-middle container row ">
-              <div className="col-md-3 order-md-1 bordered">
-                <LeftUserColumn searchChange={this.onSearchChange} />
+          <div className=' p-b-md p-r-md p-l-md'>
+            <div className='page-middle container row '>
+              <div className='col-md-3 order-md-1 bordered'>
+                <LeftUserColumn searchChange={this.onSearchChange} practiceAreaChange={this.onPracticeAreaChange} legalSkillChange={this.onLegalSkillChange} jurisdictionChange={this.onJurisdictionChange} languageChange={this.onLanguageChange} priorityChange={this.onPriorityChange} />
               </div>
-              <div className="col-md-9 order-md-1 bordered">
-                <h4 className="mb-3 page-heading">LAW FIRM COORDINATOR: Available cases</h4>
+              <div className='col-md-9 order-md-1 bordered'>
+                <h4 className='mb-3 page-heading'>LAW FIRM COORDINATOR: Available cases</h4>
                 {
-                  filteredCases.map((element,i) => <LawyerCase key={i} tags={myTags} image={element.image} title={element.title} details={element.details} />)
+                  filteredCases.map((element,i) => <LawyerCase key={i} element={element} />)
                 }
               </div>
             </div>
           </div>
         </GuestLayout>
-      )
+      );
     }
      else {  
       return (
         <GuestLayout>
         </GuestLayout>
-      )
+      );
      }
   }
 }

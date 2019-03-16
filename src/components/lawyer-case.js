@@ -4,7 +4,7 @@ import localStyles from './local-styles.css';
 import Select from 'react-select';
 import CatDog from '../resources/img/phil.jpeg';
 
-class ApplyCaseRender extends React.Component {
+export default class LawyerCase extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,22 +15,34 @@ class ApplyCaseRender extends React.Component {
   handleChange = () => {
     this.setState({
       applied: true
-    })
+    });
   }
 
-  render() {
-    if (!this.state.applied) {
-      return(
-        <button className="" type="submit" onClick={this.handleChange}>Apply Case</button>
-      )
+  renderTags = () => {
+    const { tags } = this.state;
+    if (tags) {
+      return (
+        tags.map((tag, i) => {
+          return (
+            <a href="#" key={i} className="tag-button">
+              {tag}
+            </a>
+          );
+        })
+      );
     }
-    return(<button className="" type="submit" disabled>Pending</button>)    
   }
-}
 
-export default class LawyerCase extends React.PureComponent {
   render() {
     const { title, details, image, tags } = this.props;
+    const { applied } = this.state;
+    let button;
+    if (!applied) {
+      button = <button className="" type="submit" onClick={this.handleChange}>Apply Case</button>;
+    } else {
+      button = <button className="" type="submit" disabled>Pending</button>;
+    }
+    
     return (
       <div className="row">
         <div className="col-md-12">
@@ -43,20 +55,16 @@ export default class LawyerCase extends React.PureComponent {
                 <img alt="" src={image} />
               </a>
             </div>
-            <div class="case-description">
+            <div className="case-description">
               <p>{details}</p>
             </div>
 
             <div className="buttons">
-              <ApplyCaseRender />
+              {button}
             </div>
             <div>
               <div className="tags-grid">
-                {tags.map((tag) =>
-                  <a href="#" className="tag-button">
-                    {tag}
-                  </a>
-                )}
+                {this.renderTags()}
               </div>
             </div>
           </div>
