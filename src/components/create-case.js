@@ -548,13 +548,17 @@ export default () => (
             <PracticeAreaSelect />
           </div>
           <div className="mb-3">
+            <label htmlFor="legal-skill">Legal skill</label>
+            <LegalSkillSelect />
+          </div>
+          <div className="mb-3">
             <label htmlFor="jurisdiction">Jurisdiction</label>
             <JurisdictionSelect />
-          </div>            
-          <div className="mb-3">
-            <label htmlFor="description">Description</label>
-            <textarea id="description" className="form-control" rows="3" placeholder="" required></textarea>
           </div>
+          <div className="mb-3">
+            <label htmlFor="priority">Relevant Language</label>
+            <LanguageSelect />
+          </div>    
           <div className="mb-3">
             <label htmlFor="priority">Priority</label>
             <select className="custom-select d-block w-100" id="priority" required>
@@ -570,12 +574,8 @@ export default () => (
             <DayInput />
           </div>
           <div className="mb-3">
-            <label htmlFor="legal-skill">Legal skill</label>
-            <LegalSkillSelect />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="priority">Relevant Language</label>
-            <LanguageSelect />
+            <label htmlFor="description">Description</label>
+            <textarea id="description" className="form-control" rows="3" placeholder="" required></textarea>
           </div>
           <hr className="mb-4" />
           <button className="btn btn-primary btn-lg btn-block" type="submit">Create Case</button>

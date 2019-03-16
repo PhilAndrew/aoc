@@ -16,7 +16,7 @@ export default class Header extends PureComponent {
 
   render() {
     return (
-      <div className="row" style={{ marginTop: '1em', marginBottom: '1em' }}>
+      <div className="row" style={{ marginTop: '0.5em', marginBottom: '1em' }}>
         <Link to="/" className="col-3">
           <div className="card border-primary" onFocus={this.onCardHover} style={{ maxWidth: '20em' }}>
             <div className="card-body">

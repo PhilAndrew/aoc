@@ -87,12 +87,12 @@ export default class Header extends PureComponent {
             {/* <SearchBar /> */}
             <div className="header-right d-inline-flex" style={{ justifyContent: 'flex-end' }}>
               <div className="w-auto">
-                <form className="form-inline my-0 my-md-2" onSubmit={this.handleSubmit}>
-                  <input className="form-control mr-sm-2" type="text" value={value} onChange={this.handleChange} placeholder="Search" />
-                  <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                <form className="form-inline" onSubmit={this.handleSubmit}>
+                  <input className="form-control my-0 my-md-3 mr-sm-2 w-auto" type="text" value={value} onChange={this.handleChange} placeholder="Search" />
+                  <button className="btn btn-secondary my-0 my-md-3 w-auto" type="submit">Search</button>
                 </form>
               </div>
-              <div className="ml-4 my-0 my-md-2">
+              <div className="ml-4 my-0 my-md-3">
                 <a href="#">
                   <img src={User} alt="User" className="" style={{ width: 35 }} onClick={event => { console.log('account details'); } } />
                 </a>
