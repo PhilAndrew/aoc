@@ -136,8 +136,8 @@ export default class NgoCase extends React.PureComponent {
             </div>
 
             <div className="buttons">
-              <button className="" type="submit">Details</button>
-              <button className="" type="submit">Remove</button>
+              <button className="buttonCaseList" type="submit">Details</button>
+              <button className="buttonCaseList grayButtonCaseList" type="submit">Remove</button>
             </div>
             <div>
               <div className="tags-grid">

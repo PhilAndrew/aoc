@@ -320,3 +320,31 @@ height: 1000px;
   outline:none !important;
 }
 
+.buttonCaseList {
+  background: #1976D2;
+  border-radius: 1em;
+  border: 0px solid transparent;
+  color: #fff;
+  text-decoration: none !important;
+  outline: none !important;
+
+  display: inline-block;
+  min-width: 4em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left:0em;
+  margin-right:0.5em;
+  margin-top:0em;
+  margin-bottom: 0.25em;
+
+  text-align: center;
+}
+
+/* Active state animation applied here */
+.buttonCaseList:active {
+  -webkit-animation: active 1200ms ease 1 alternate;
+  animation: active 1200ms ease 1 alternate; 
+  background: #5F9BE0;
+}
+.grayButtonCaseList { background: #D2D2D2; }
+.grayButtonCaseList:active { background: #b9b9b9; }
