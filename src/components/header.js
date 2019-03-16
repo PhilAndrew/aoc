@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
-import CatDog from '../resources/img/logo.png';
+import User from '../resources/img/user.png';
 // import SearchBar from './search-bar';
 
 export default class Header extends PureComponent {
@@ -39,9 +39,9 @@ export default class Header extends PureComponent {
   }
 
   render() {
-    const { open } = this.state;
+    const { open, value } = this.state;
     return (
-      <div>
+      <div className="sticky-top">
         <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
           <div className="container header">
             <div className="navbar-brand">
@@ -85,10 +85,19 @@ export default class Header extends PureComponent {
               </Link>
             </div>
             {/* <SearchBar /> */}
-            <form className="form-inline my-2 my-lg-0" onSubmit={this.handleSubmit}>
-              <input className="form-control mr-sm-2" type="text" value={ this.state.value} onChange={this.handleChange} placeholder="Search" />
-              <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <div className="header-right d-inline-flex" style={{ justifyContent: 'flex-end' }}>
+              <div className="w-auto">
+                <form className="form-inline my-0 my-md-2" onSubmit={this.handleSubmit}>
+                  <input className="form-control mr-sm-2" type="text" value={value} onChange={this.handleChange} placeholder="Search" />
+                  <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+              <div className="ml-4 my-0 my-md-2">
+                <a href="#">
+                  <img src={User} alt="User" className="" style={{ width: 35 }} onClick={event => { console.log('account details'); } } />
+                </a>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
