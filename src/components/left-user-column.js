@@ -434,6 +434,23 @@ const legalSkillsOptions = [
     { value: 'training', label: 'Training' },    
 ];
 
+
+const languageOptions = [
+    { value: 'english', label: 'English' },
+    { value: 'chinese', label: 'Chinese' },
+    { value: 'french', label: 'French' },
+    { value: 'spanish', label: 'Spanish' },
+    { value: 'filipino', label: 'Filipino' },    
+];
+
+
+const prioritySelect = [
+    { value: 'high', label: 'High' },
+    { value: 'medium', label: 'Medium' },
+    { value: 'low', label: 'Low' },
+];
+
+
   class PracticeAreaSelect extends React.Component {
     state = {
       selectedOption: null,
@@ -482,6 +499,30 @@ class JurisdictionSelect extends React.Component {
   }
   
 
+  class LanguageSelect extends React.Component {
+    state = {
+      selectedOption: null,
+    }
+    handleChange = (selectedOption) => {
+      this.setState({ selectedOption });
+      console.log(`Option selected:`, selectedOption);
+    }
+    render() {
+      const { selectedOption } = this.state;
+  
+      return (
+        <Select
+          value={selectedOption}
+          onChange={this.handleChange}
+          options={languageOptions}
+          isMulti={true}
+        />
+      );
+    }
+  }
+
+
+
   class LegalSkillsSelect extends React.Component {
     state = {
       selectedOption: null,
@@ -498,6 +539,30 @@ class JurisdictionSelect extends React.Component {
           value={selectedOption}
           onChange={this.handleChange}
           options={legalSkillsOptions}
+          isMulti={true}
+        />
+      );
+    }
+  }
+
+
+
+  class PrioritySelect extends React.Component {
+    state = {
+      selectedOption: null,
+    }
+    handleChange = (selectedOption) => {
+      this.setState({ selectedOption });
+      console.log(`Option selected:`, selectedOption);
+    }
+    render() {
+      const { selectedOption } = this.state;
+  
+      return (
+        <Select
+          value={selectedOption}
+          onChange={this.handleChange}
+          options={prioritySelect}
           isMulti={true}
         />
       );
@@ -533,7 +598,7 @@ export default class LeftUserColumn extends React.Component {
         <div className="row">
         <div className="col-md-12">
         <label htmlFor="practice-area">Priority</label>
-        <JurisdictionSelect />
+        <PrioritySelect />
         </div></div>
 
         <div className="row">
@@ -545,7 +610,7 @@ export default class LeftUserColumn extends React.Component {
         <div className="row">
         <div className="col-md-12">
         <label htmlFor="practice-area">Language</label>
-        <JurisdictionSelect />
+        <LanguageSelect />
         </div></div>
 
         <div className="row">
