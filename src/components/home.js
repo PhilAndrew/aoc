@@ -8,6 +8,7 @@ import LandingBanner from './landing-banner';
 export default () => (
   <GuestLayout>
     <section className="hero">
+      <LandingBanner />
       <div className="">
         <div className="container">
           <section className="row">
@@ -22,9 +23,6 @@ export default () => (
               <br />
               <br />
             </div>
-          </section>
-          <section className="row">
-            <LandingBanner />
           </section>
           <section className="row">
             <div className="col-md-4 section_title animated wow fadeInUp">
