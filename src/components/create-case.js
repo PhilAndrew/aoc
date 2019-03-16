@@ -402,12 +402,31 @@ for (let i = 0; i < languages.length; i++) {
 }
 
 const optionsPracticeArea = [
-  { value: 'immigration', label: 'Immigration' },
-  { value: 'incorporation', label: 'Incorporation' },
-  { value: 'taxexemption', label: 'Tax exemption' },
-  { value: 'courtproceeding', label: 'Court proceeding' },
-  { value: 'documentreview', label: 'Document review' },
-  { value: 'research', label: 'Research' },
+  {value: 'arbitrationanddisputeresolution', label: 'Arbitration & Dispute Resolution'},
+  {value: 'bankingandfinance', label: 'Banking and Finance'},
+  {value: 'competition', label: 'Competition'},
+  {value: 'construction', label: 'Construction'},
+  {value: 'corporate', label: 'Corporate'},
+  {value: 'criminal', label: 'Criminal'},
+  {value: 'employment', label: 'Employment'},
+  {value: 'energyandinfrastructure', label: 'Energy and Infrastructure'},
+  {value: 'environmental', label: 'Environmental'},
+  {value: 'family', label: 'Family'},
+  {value: 'healthcareandclinalnegligence', label: 'Healthcare and Clinical Negligence'},
+  {value: 'immigration', label: 'Immigration'},
+  {value: 'insolvency', label: 'Insolvency'},
+  {value: 'insurance', label: 'Insurance'},
+  {value: 'intellectualproperty', label: 'Intellectual Property'},
+  {value: 'litigation', label: 'Litigation'},
+  {value: 'media', label: 'Media'},
+  {value: 'privacy', label: 'Privacy'},
+  {value: 'property', label: 'Property'},
+  {value: 'publicsector', label: 'Public Sector'},
+  {value: 'shippingandmaritime', label: 'Shipping and Maritime'},
+  {value: 'sports', label: 'Sports'},
+  {value: 'tax', label: 'Tax'},
+  {value: 'technology', label: 'Technology'},
+  {value: 'willstrustandprobate', label: 'Wills, Trust and Probate'}
 ];
 
 class PracticeAreaSelect extends React.Component {
@@ -434,12 +453,12 @@ class PracticeAreaSelect extends React.Component {
 
 
 const optionsLegalSkill = [
-  { value: 'immigration', label: 'Immigration' },
-  { value: 'incorporation', label: 'Incorporation' },
-  { value: 'taxexemption', label: 'Tax exemption' },
-  { value: 'courtproceeding', label: 'Court proceeding' },
-  { value: 'documentreview', label: 'Document review' },
-  { value: 'research', label: 'Research' },
+  { value: 'advice', label: 'Advice'},
+  { value: 'advocacy', label: 'Advocacy'},
+  { value: 'draftorreviewlegaldocumentation', label: 'Draft/Review Legal Documentation'},
+  { value: 'directrepresentation', label: 'Direct Representation'},
+  { value: 'research', label: 'Research'},
+  { value: 'training', label: 'Training'},
 ];
 
 class LegalSkillSelect extends React.Component {
@@ -578,7 +597,7 @@ export default () => (
             <textarea id="description" className="form-control" rows="3" placeholder="" required></textarea>
           </div>
           <hr className="mb-4" />
-          <button className="btn btn-primary btn-lg btn-block" type="submit">Create Case</button>
+          <button className="btn btn-primary btn-lg btn-block" type="submit">Publish</button>
         </form>
         </div>
       </div> 

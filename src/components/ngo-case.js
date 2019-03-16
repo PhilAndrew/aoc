@@ -6,6 +6,7 @@ import CatDog from '../resources/img/phil.jpeg';
 
 export default class NgoCase extends React.PureComponent {
   render() {
+    console.log('hi');
     const { title, details, image } = this.props;
     return (
       <div className="row">
