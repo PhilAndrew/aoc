@@ -38,62 +38,100 @@ const LawyerCaseList = [
 const myTags = ["hi", "there"];
 
 export default class CaseHistory extends React.Component {
+  constructor(props) {
+    super(props);
+    let loggedIn = false;
+    let caseList = [];
+    if (cookie.getItem('userType') === 'ngo') {
+      loggedIn = true;
+      caseList = NgoCaseList;
+    }
+    if (cookie.getItem('userType') === 'lawyer') {
+      loggedIn = true;
+      caseList = LawyerCaseList;
+    }
+    if (cookie.getItem('userType') === 'coordinator') {
+      loggedIn = true;
+      caseList = LawyerCaseList;
+    }
+    this.state = {
+      loggedIn,
+      caseList,
+      searchField: ''
+    };
+  }
+
+  onSearchChange = (event) => {
+    this.setState({ searchField: event.target.value });
+  }
 
   render() {
-    if (cookie.getItem('userType') === 'ngo')
-    return (
-    <GuestLayout>
-      <div className=" p-b-md p-r-md p-l-md">
-        <div className="page-middle container row ">
-          <div className="col-md-3 order-md-1 bordered">
-            <LeftUserColumn />
-          </div>
-          <div className="col-md-9 order-md-1 bordered">
-            <h4 className="mb-3 page-heading">Available cases</h4>
-            {
-              NgoCaseList.map((element, i) => <NgoCase key={i} image={element.image} title={element.title} details={element.details} />)
-            }
-          </div>
-        </div>
-      </div>
-    </GuestLayout>)
-    else if (cookie.getItem('userType') === 'lawyer')
-    return (
+    const { caseList, searchField } = this.state;
+    const filteredCases = caseList.filter((cases) => {
+      return cases.title.toLowerCase().includes(searchField.toLowerCase())
+    });
+    if (cookie.getItem('userType') === 'ngo') {
+      return (
       <GuestLayout>
         <div className=" p-b-md p-r-md p-l-md">
           <div className="page-middle container row ">
             <div className="col-md-3 order-md-1 bordered">
-              <LeftUserColumn />
+              <LeftUserColumn searchChange={this.onSearchChange} />
             </div>
             <div className="col-md-9 order-md-1 bordered">
-              <h4 className="mb-3 page-heading">LAWYER: Search cases</h4>
+              <h4 className="mb-3 page-heading">Available cases</h4>
               {
-                LawyerCaseList.map((element,i) => <LawyerCase key={i} tags={myTags} image={element.image} title={element.title} details={element.details} />)
+                filteredCases.map((element, i) => <NgoCase key={i} tags={myTags} image={element.image} title={element.title} details={element.details} />)
               }
             </div>
           </div>
         </div>
-      </GuestLayout>)
-    else if (cookie.getItem('userType') === 'coordinator')
-    return (
-      <GuestLayout>
-        <div className=" p-b-md p-r-md p-l-md">
-          <div className="page-middle container row ">
-            <div className="col-md-3 order-md-1 bordered">
-              <LeftUserColumn />
-            </div>
-            <div className="col-md-9 order-md-1 bordered">
-              <h4 className="mb-3 page-heading">LAW FIRM COORDINATOR: Available cases</h4>
-              {
-                LawyerCaseList.map((element,i) => <LawyerCase key={i} tags={myTags} image={element.image} title={element.title} details={element.details} />)
-              }
+      </GuestLayout>
+      )
+    }
+    else if (cookie.getItem('userType') === 'lawyer') {
+      return (
+        <GuestLayout>
+          <div className=" p-b-md p-r-md p-l-md">
+            <div className="page-middle container row ">
+              <div className="col-md-3 order-md-1 bordered">
+                <LeftUserColumn searchChange={this.onSearchChange} />
+              </div>
+              <div className="col-md-9 order-md-1 bordered">
+                <h4 className="mb-3 page-heading">LAWYER: Search cases</h4>
+                {
+                  filteredCases.map((element,i) => <LawyerCase key={i} tags={myTags} image={element.image} title={element.title} details={element.details} />)
+                }
+              </div>
             </div>
           </div>
-        </div>
-      </GuestLayout>)
-     else   
-     return (
-      <GuestLayout>
-      </GuestLayout>)
-          }
+        </GuestLayout>
+      )
+    }
+    else if (cookie.getItem('userType') === 'coordinator') {
+      return (
+        <GuestLayout>
+          <div className=" p-b-md p-r-md p-l-md">
+            <div className="page-middle container row ">
+              <div className="col-md-3 order-md-1 bordered">
+                <LeftUserColumn searchChange={this.onSearchChange} />
+              </div>
+              <div className="col-md-9 order-md-1 bordered">
+                <h4 className="mb-3 page-heading">LAW FIRM COORDINATOR: Available cases</h4>
+                {
+                  filteredCases.map((element,i) => <LawyerCase key={i} tags={myTags} image={element.image} title={element.title} details={element.details} />)
+                }
+              </div>
+            </div>
+          </div>
+        </GuestLayout>
+      )
+    }
+     else {  
+      return (
+        <GuestLayout>
+        </GuestLayout>
+      )
+     }
+  }
 }

@@ -6,8 +6,7 @@ import CatDog from '../resources/img/phil.jpeg';
 
 export default class NgoCase extends React.PureComponent {
   render() {
-    console.log('hi');
-    const { title, details, image } = this.props;
+    const { title, details, image, tags } = this.props;
     return (
       <div className="row">
         <div className="col-md-12">
@@ -29,19 +28,12 @@ export default class NgoCase extends React.PureComponent {
               <button className="" type="submit">Remove</button>
             </div>
             <div>
-              <div className="tagcloud03">
-                <ul>
-                  <li>
-                    <a href="#">
-                      Immigration
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Lorem ipsum dolor sit amet
-                    </a>
-                  </li>
-                </ul>
+              <div className="tags-grid">
+                {tags.map((tag) =>
+                  <a href="#" className="tag-button">
+                    {tag}
+                  </a>
+                )}
               </div>
             </div>
           </div>

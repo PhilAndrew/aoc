@@ -586,6 +586,12 @@ export default class LeftUserColumn extends React.Component {
 
         <div className="row">
         <div className="col-md-12">
+        <label htmlFor="search-cases">Search</label>
+        <input className="" type="search" placeholder="Search Cases" onChange={this.props.searchChange} />
+        </div></div>
+
+        <div className="row">
+        <div className="col-md-12">
         <label htmlFor="practice-area">Practice Area</label>
         <PracticeAreaSelect />
         </div></div>
@@ -615,7 +621,7 @@ export default class LeftUserColumn extends React.Component {
 
         <div className="row">
         <div className="col-md-12">
-        <button class="btn btn-secondary my-0 my-md-3 w-auto" type="submit">Search</button>
+        <button className="btn btn-secondary my-0 my-md-3 w-auto" type="submit">Search</button>
         </div></div>
 
         </div></div>
