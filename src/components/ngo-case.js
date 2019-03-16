@@ -3,11 +3,10 @@ import GuestLayout from './guest-layout';
 import localStyles from './local-styles.css';
 import Select from 'react-select';
 import CatDog from '../resources/img/phil.jpeg';
-import Immigration from '../resources/img/immigration.png';
 
 export default class NgoCase extends React.PureComponent {
   render() {
-    const { title, details } = this.props;
+    const { title, details, image } = this.props;
     return (
       <div className="row">
         <div className="col-md-12">
@@ -17,7 +16,7 @@ export default class NgoCase extends React.PureComponent {
                 {title}
               </a>
               <a href="#" className="float-right">
-                <img alt="test" src={Immigration} />
+                <img alt="test" src={image} />
               </a>
             </div>
             <div class="case-description">
