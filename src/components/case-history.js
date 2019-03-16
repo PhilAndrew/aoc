@@ -44,7 +44,7 @@ export default class CaseHistory extends React.Component {
     let caseList = [];
     if (cookie.getItem('userType') === 'ngo') {
       loggedIn = true;
-      caseList = NGOCaseList;
+      caseList = NgoCaseList;
     }
     if (cookie.getItem('userType') === 'lawyer') {
       loggedIn = true;
