@@ -8,7 +8,7 @@ export default class LawyerCase extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+
     }
   }
 
@@ -35,8 +35,7 @@ export default class LawyerCase extends React.Component {
             </div>
 
             <div className="buttons">
-              <button className="" type="submit">Details</button>
-              <button className="" type="submit" onClick={this.handleChange}>Apply Case</button>
+              <button className="" type="submit">Apply Case</button>
             </div>
             <div>
               <div className="tagcloud03">

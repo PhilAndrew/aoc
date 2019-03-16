@@ -9,9 +9,10 @@ export default class LandingBanner extends PureComponent {
 
   render() {
     return (
-      <div className="container-fluid" style={{ padding: 0 }}>
-        <img className="img-fluid" src={Banner} style={{ objectFit: 'cover' }} />
-      </div>
+      <div></div>
+      //<div className="container-fluid" style={{ padding: 0 }}>
+//        <img className="img-fluid" src={Banner} style={{ objectFit: 'cover' }} />
+      //</div>
     );
   }
 }

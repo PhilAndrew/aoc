@@ -10,6 +10,8 @@ export default class AocLogin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      userNameValue: '',
+      passwordValue: '',
       loaded: false,
       loggedIn: false,
       error: '',
@@ -36,6 +38,8 @@ export default class AocLogin extends React.Component {
     cookie.setItem('userType', '');
     this.setState({
         loggedIn: false,
+        userNameValue: '',
+        passwordValue: ''
       });
   }
 /*
@@ -84,6 +88,44 @@ export default class AocLogin extends React.Component {
     console.log('3');
     }
 
+    loginUser(e) {
+      if (this.state.userNameValue.toLowerCase() === 'ngo') {
+        cookie.setItem('secretKey', 'allowmein');
+        cookie.setItem('userType', 'ngo');
+        this.setState({
+          loggedIn: true,
+        });
+      } else
+      if (this.state.userNameValue.toLowerCase() === 'coordinator') {
+        cookie.setItem('secretKey', 'allowmein');
+        cookie.setItem('userType', 'coordinator');
+        this.setState({
+          loggedIn: true,
+        });
+      } else
+      if (this.state.userNameValue.toLowerCase() === 'lawyer') {
+        cookie.setItem('secretKey', 'allowmein');
+        cookie.setItem('userType', 'lawyer');
+        this.setState({
+          loggedIn: true,
+        });
+      } 
+      }
+  
+
+      updateUserNameValue(evt) {
+        this.setState({
+          userNameValue: evt.target.value
+        });
+      }
+
+      updatePasswordValue(evt) {
+        this.setState({
+          passwordValue: evt.target.value
+        });
+      }
+
+
   render() {
     const {
       loggedIn,
@@ -94,16 +136,33 @@ export default class AocLogin extends React.Component {
     if (!loaded) return null;
     if (loggedIn) {
       //return <Redirect push={false} to={this.onLoginRedirectUrl} />;
-      return <div>
-          <p>Welcome logged in person</p>
+      if (this.state.userNameValue === 'ngo')
+        return (<div>
+            <p>Welcome NGO user</p>
+            <button type="submit" className="button is-link margin-right-5px" onClick={e => this.logout(e)}>Logout</button>
+            </div>)
+      else    
+      if (this.state.userNameValue === 'coordinator')
+        return (<div>
+            <p>Welcome Coordinator user</p>
+            <button type="submit" className="button is-link margin-right-5px" onClick={e => this.logout(e)}>Logout</button>
+            </div>)
+      else    
+      if (this.state.userNameValue === 'lawyer')
+        return (<div>
+            <p>Welcome Lawyer user</p>
+            <button type="submit" className="button is-link margin-right-5px" onClick={e => this.logout(e)}>Logout</button>
+            </div>)
+        else return (<div>
           <button type="submit" className="button is-link margin-right-5px" onClick={e => this.logout(e)}>Logout</button>
-          </div>
+          </div>)
     }
     return (
         <div>
         <section className="row">
         <div className="col-md-4 section_title animated wow fadeInUp">
                 <h2>User login.</h2>
+                <p>Login with user name as ngo or coordinator or lawyer with any password.</p>
               </div>          
         <div className="col-md-6">
         <div className="field">
@@ -111,12 +170,14 @@ export default class AocLogin extends React.Component {
                   username
                   <div className="control">
                     <input
-                      defaultValue="User name"
+                      defaultValue=""
                       id="username"
                       name="username"
                       className={`input`}
                       type="text"
                       placeholder="Username input"
+                      value={this.state.userNameValue}
+                      onChange={evt => this.updateUserNameValue(evt)}
                     />
                   </div>
                 </label>
@@ -126,21 +187,21 @@ export default class AocLogin extends React.Component {
                   password
                   <div className="control">
                     <input
-                      defaultValue="Password"
+                      defaultValue=""
                       id="password"
                       name="password"
                       className={`input`}
                       type="password"
                       placeholder="Password input"
+                      value={this.state.passwordValue}
+                      onChange={evt => this.updatePasswordValue(evt)}
                     />
                   </div>
                 </label>
               </div>
               <div className="field is-grouped">
                 <div className="control">
-                  <button type="submit" className="button is-link margin-right-5px" onClick={e => this.loginNgo(e)}>NGO Login</button>
-                  <button type="submit" className="button is-link margin-right-5px" onClick={e => this.loginLawFirmCoordinator(e)}>Law firm Coordinator Login</button>
-                  <button type="submit" className="button is-link" onClick={e => this.loginLawyer(e)}>Lawyer</button>
+                  <button type="submit" className="button is-link margin-right-5px" onClick={e => this.loginUser(e)}>Login</button>
                 </div>
               </div>
         </div>
