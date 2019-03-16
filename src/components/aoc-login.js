@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import GuestLayout from './guest-layout';
 import cookie from '../libs/cookie';
 import Authenticator from './fake-authenticator';
+import HomepageJpeg from '../resources/img/homepage.jpeg';
 
 export default class AocLogin extends React.Component {
   onLoginRedirectUrl = '/';
@@ -160,10 +161,18 @@ export default class AocLogin extends React.Component {
     return (
         <div>
         <section className="row">
-        <div className="col-md-7 section_title animated wow fadeInUp">
+        <div className="col-md-9 section_title animated wow fadeInUp">
+        <div className="row">
+        <div className="col-md-9">
+        <h1 style={{ fontSize: '23pt'}}>Access Our Community</h1>
+        <div style={{ backgroundImage: `url(${HomepageJpeg})`, opacity: '0.8', backgroundPosition: 'right -280px top -290px', boxShadow: '0 0 3px 3px rgba(0, 0, 0, 0.9) inset', height: '200px' }} />
+        </div>
+        <div className="col-md-3">
                 <h2>User login.</h2>
                 <p>Login with user name as ngo or coordinator or lawyer with any password.</p>
-              </div>          
+                </div>
+              </div>     
+              </div>     
         <div className="col-md-3 user-login-area">
         <div className="field">
                 <label className="label" htmlFor="username">
@@ -205,6 +214,7 @@ export default class AocLogin extends React.Component {
                 </div>
               </div>
         </div>
+
         </section>
         </div>
     );
