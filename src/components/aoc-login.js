@@ -139,22 +139,22 @@ export default class AocLogin extends React.Component {
       if (this.state.userNameValue === 'ngo')
         return (<div>
             <p>Welcome NGO user</p>
-            <button type="submit" className="button is-link margin-right-5px" onClick={e => this.logout(e)}>Logout</button>
+            <button type="submit" className="button is-link margin-right-5px login-button" onClick={e => this.logout(e)}>Logout</button>
             </div>)
       else    
       if (this.state.userNameValue === 'coordinator')
         return (<div>
             <p>Welcome Coordinator user</p>
-            <button type="submit" className="button is-link margin-right-5px" onClick={e => this.logout(e)}>Logout</button>
+            <button type="submit" className="button is-link margin-right-5px login-button" onClick={e => this.logout(e)}>Logout</button>
             </div>)
       else    
       if (this.state.userNameValue === 'lawyer')
         return (<div>
             <p>Welcome Lawyer user</p>
-            <button type="submit" className="button is-link margin-right-5px" onClick={e => this.logout(e)}>Logout</button>
+            <button type="submit" className="button is-link margin-right-5px login-button" onClick={e => this.logout(e)}>Logout</button>
             </div>)
         else return (<div>
-          <button type="submit" className="button is-link margin-right-5px" onClick={e => this.logout(e)}>Logout</button>
+          <button type="submit" className="button is-link margin-right-5px login-button" onClick={e => this.logout(e)}>Logout</button>
           </div>)
     }
     return (
