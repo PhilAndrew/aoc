@@ -69,27 +69,22 @@ export default class CaseHistory extends React.Component {
 
   onPracticeAreaChange = (event) => {
     this.setState({ practiceAreas: event });
-    console.log('practice areas', event);
   }
 
   onLegalSkillChange = (event) => {
     this.setState({ legalSkills: event });
-    console.log('legal skills', event);
   }
 
   onJurisdictionChange = (event) => {
     this.setState({ jurisdictions: event });
-    console.log('jurisdictions', event);
   }
 
   onLanguageChange = (event) => {
     this.setState({ languages: event });
-    console.log('languages', event);
   }
 
   onPriorityChange = (event) => {
     this.setState({ priorities: event });
-    console.log('priority', event);
   }
 
   render() {

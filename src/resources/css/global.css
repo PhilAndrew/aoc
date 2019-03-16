@@ -304,3 +304,19 @@ height: 1000px;
 }
 }
 
+.searchBoxCaseList {
+  width: 100%;
+  border-width: 1px;
+  height: 2.4em;
+  border-style: solid;
+  border-color: #c9c9c9;
+  border-radius: 4px;
+  padding: 0.5em;
+}
+
+.searchBoxCaseList:focus {
+  border-color:#1b78f9;
+  border-width: 2px;
+  outline:none !important;
+}
+
