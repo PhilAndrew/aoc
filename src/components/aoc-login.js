@@ -201,9 +201,6 @@ export default class AocLogin extends React.Component {
               <div className="field is-grouped">
                 <div className="control">
                   <button type="submit" className="button is-link margin-right-5px" onClick={e => this.loginUser(e)}>Login</button>
-                  <button type="submit" className="button is-link margin-right-5px" onClick={e => this.loginNgo(e)}>NGO Login</button>
-                  <button type="submit" className="button is-link margin-right-5px" onClick={e => this.loginLawFirmCoordinator(e)}>Law firm Coordinator Login</button>
-                  <button type="submit" className="button is-link" onClick={e => this.loginLawyer(e)}>Lawyer</button>
                 </div>
               </div>
         </div>
