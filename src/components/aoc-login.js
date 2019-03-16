@@ -160,14 +160,14 @@ export default class AocLogin extends React.Component {
     return (
         <div>
         <section className="row">
-        <div className="col-md-4 section_title animated wow fadeInUp">
+        <div className="col-md-6 section_title animated wow fadeInUp">
                 <h2>User login.</h2>
                 <p>Login with user name as ngo or coordinator or lawyer with any password.</p>
               </div>          
-        <div className="col-md-6">
+        <div className="col-md-4">
         <div className="field">
                 <label className="label" htmlFor="username">
-                  username
+                  Username
                   <div className="control">
                     <input
                       defaultValue=""
@@ -184,7 +184,7 @@ export default class AocLogin extends React.Component {
               </div>
               <div className="field">
                 <label className="label" htmlFor="password">
-                  password
+                  Password
                   <div className="control">
                     <input
                       defaultValue=""
@@ -201,7 +201,7 @@ export default class AocLogin extends React.Component {
               </div>
               <div className="field is-grouped">
                 <div className="control">
-                  <button type="submit" className="button is-link margin-right-5px" onClick={e => this.loginUser(e)}>Login</button>
+                  <button type="submit" className="button is-link margin-right-5px login-button" onClick={e => this.loginUser(e)}>Login</button>
                 </div>
               </div>
         </div>
