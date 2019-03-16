@@ -536,9 +536,6 @@ export default () => (
     <div className="container p-b-md p-r-md p-l-md">
 
     <div className="row ">
-        <div className="col-md-2 order-md-1 bordered">
-          <LeftUserColumn />
-        </div>
         <div className="col-md-6 order-md-1 bordered">
         <h4 className="mb-3 page-heading">Create a new Case</h4>
         <form className="needs-validation" noValidate>
