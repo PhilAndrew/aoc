@@ -8,7 +8,6 @@ import LandingBanner from './landing-banner';
 export default () => (
   <GuestLayout>
     <section className="hero">
-      <LandingBanner />
       <div className="">
         <div className="container">
           <section className="row">
