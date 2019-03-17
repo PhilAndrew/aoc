@@ -182,7 +182,9 @@ export default class CaseHistory extends React.Component {
                 <LeftUserColumn searchChange={this.onSearchChange} practiceAreaChange={this.onPracticeAreaChange} legalSkillChange={this.onLegalSkillChange} jurisdictionChange={this.onJurisdictionChange} languageChange={this.onLanguageChange} priorityChange={this.onPriorityChange} />
               </div>
               <div className='col-md-9 order-md-1 bordered'>
-                <h4 className='mb-3 page-heading'>LAWYER: Search cases</h4>
+                <div className="pageHeading">
+                  <h4 className='mb-3 pageHeadingText'>LAWYER: Search cases</h4>
+                </div>
                 <CaseList allCases={filteredCases} />
               </div>
             </div>
@@ -198,7 +200,9 @@ export default class CaseHistory extends React.Component {
                 <LeftUserColumn searchChange={this.onSearchChange} practiceAreaChange={this.onPracticeAreaChange} legalSkillChange={this.onLegalSkillChange} jurisdictionChange={this.onJurisdictionChange} languageChange={this.onLanguageChange} priorityChange={this.onPriorityChange} />
               </div>
               <div className='col-md-9 order-md-1 bordered'>
-                <h4 className='mb-3 page-heading'>LAW FIRM COORDINATOR: Available cases</h4>
+                <div className="pageHeading">
+                  <h4 className='mb-3 pageHeadingText'>LAW FIRM COORDINATOR: Available cases</h4>
+                </div>
                 <CaseList allCases={filteredCases} />
               </div>
             </div>

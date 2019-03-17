@@ -146,23 +146,25 @@ export default () => (
 
     <div className="row ">
         <div className="col-md-6 order-md-1 bordered">
-        <h4 className="mb-3 page-heading">Create a new Case</h4>
+        <div className="pageHeading">
+          <h4 className="mb-3 pageHeadingText">Create a new Case</h4>
+        </div>
         <form className="needs-validation" noValidate>
           <div className="mb-3">
-            <label htmlFor="title">Title</label>
-            <input type="text" className="form-control" id="title" placeholder="" required />
+            <label htmlFor="client" className="font-weight-bold">Client Name</label>
+            <input type="text" className="form-control searchBoxCaseList" id="client" placeholder="" required />
           </div>
           <div className="mb-3">
-            <label htmlFor="client">Client Name</label>
-            <input type="text" className="form-control" id="client" placeholder="" required />
+            <label htmlFor="title" className="font-weight-bold">Title</label>
+            <input type="text" className="form-control searchBoxCaseList" id="title" placeholder="" required />
           </div>
           <div className="mb-3">
-            <label htmlFor="practice-area">Practice Area</label>
+            <label htmlFor="practice-area" className="font-weight-bold">Practice Area</label>
             <PracticeAreaSelect />
           </div>
 
           <div className="mb-3">
-            <label htmlFor="legal-skill">Legal skill</label>
+            <label htmlFor="legal-skill" className="font-weight-bold">Legal skill</label>
 
             <div className="custom-control custom-checkbox">
             <input type="checkbox" className="custom-control-input" id="a1" name="defaultExampleRadios2" />
@@ -197,15 +199,15 @@ export default () => (
         </div>
 
           <div className="mb-3">
-            <label htmlFor="jurisdiction">Jurisdiction</label>
+            <label htmlFor="jurisdiction" className="font-weight-bold">Jurisdiction</label>
             <JurisdictionSelect />
           </div>
           <div className="mb-3">
-            <label htmlFor="priority">Relevant Language</label>
+            <label htmlFor="language" className="font-weight-bold">Language</label>
             <LanguageSelect />
           </div>
           <div className="mb-3">
-          <label htmlFor="priority">Priority</label>
+          <label htmlFor="priority" className="font-weight-bold">Priority</label>
           <div className="custom-control custom-radio">
             <input type="radio" className="custom-control-input" id="one" name="defaultExampleRadios" />
             <label className="custom-control-label" for="one">Immediate</label>
@@ -220,16 +222,16 @@ export default () => (
           </div>
           </div>
           <div className="mb-3">
-            <label htmlFor="deadline">Expected Date of Completion</label>
+            <label htmlFor="deadline" className="font-weight-bold">Expected Date of Completion</label>
             <br />
             <DayInput />
           </div>
           <div className="mb-3">
-            <label htmlFor="description">Description</label>
-            <textarea id="description" className="form-control" rows="3" placeholder="" required></textarea>
+            <label htmlFor="description" className="font-weight-bold">Description</label>
+            <textarea id="description" className="form-control searchBoxCaseList" rows="3" placeholder="" required></textarea>
           </div>
           <hr className="mb-4" />
-          <button className="btn btn-primary btn-lg share-button" type="submit">Share to everyone</button>
+          <button className="btn btn-primary btn-lg share-button" type="submit">Share to Everyone</button>
           <button className="btn btn-primary btn-lg share-button" type="submit">Share to my Connections</button>
         </form>
         </div>
