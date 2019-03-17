@@ -116,7 +116,6 @@ export default class AocLogin extends React.Component {
       console.log('hi');
       window.location.reload();
       }
-      }
 
 
       updateUserNameValue(evt) {
