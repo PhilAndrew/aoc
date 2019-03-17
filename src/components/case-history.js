@@ -56,7 +56,10 @@ export default class CaseHistory extends React.Component {
       legalSkills: [],
       jurisdictions: [],
       languages: [],
-      priorities: []
+      priorities: [],
+      availableSelected: true,
+      pendingSelected: false,
+      matchedSelected: false,
     };
   }
 
@@ -82,6 +85,30 @@ export default class CaseHistory extends React.Component {
 
   onPriorityChange = (event) => {
     this.setState({ priorities: event });
+  }
+
+  availableHandleClick = () => {
+    this.setState({
+      availableSelected: true,
+      pendingSelected: false,
+      matchedSelected: false,
+    });
+  }
+
+  pendingHandleClick = () => {
+    this.setState({
+      availableSelected: false,
+      pendingSelected: true,
+      matchedSelected: false,
+    });
+  }
+
+  matchedHandleClick = () => {
+    this.setState({
+      availableSelected: false,
+      pendingSelected: false,
+      matchedSelected: true,
+    });
   }
 
   render() {
@@ -133,7 +160,13 @@ export default class CaseHistory extends React.Component {
               <LeftUserColumn searchChange={this.onSearchChange} practiceAreaChange={this.onPracticeAreaChange} legalSkillChange={this.onLegalSkillChange} jurisdictionChange={this.onJurisdictionChange} languageChange={this.onLanguageChange} priorityChange={this.onPriorityChange} />
             </div>
             <div className='col-md-9 order-md-1 bordered'>
-              <h4 className='mb-3 page-heading'>Available cases</h4>
+              <div className='mb-3 pageHeading'>
+                <div className="d-inline-block pageHeadingDiv">
+                  <h4 className={`float-left pageHeadingText ${this.state.availableSelected ? 'pageHeadingSelectedTab' : ''}`} onClick={this.availableHandleClick}>Available Cases</h4>
+                  <h4 className={`float-left pageHeadingText ${this.state.pendingSelected ? 'pageHeadingSelectedTab' : ''}`} onClick={this.pendingHandleClick}>Pending Cases</h4>
+                  <h4 className={`float-left pageHeadingText ${this.state.matchedSelected ? 'pageHeadingSelectedTab' : ''}`} onClick={this.matchedHandleClick}>Matched Cases</h4>
+                </div>
+              </div>
               <CaseList allCases={filteredCases} />
             </div>
           </div>
