@@ -34,13 +34,13 @@ export default class CaseList extends React.Component {
         </div>
       );
     } else if (cookie.getItem('userType') === 'coordinator') {
-      caseComponent = allCases.map((singleCase, i) => <CoordinatorCase singleCase={allCases[i]} />);
+      caseComponent = allCases.map((singleCase, i) => <CoordinatorCase singleCase={allCases[i]} lastValue={i === allCases.length-1} />);
       return (
         <table className="coordinatorTable">
           <tr className="coordinatorTR">
-            <td className="coordinatorTH">Lawyer Name</td>
-            <td className="coordinatorTH">Case</td>
-            <td className="coordinatorTH">??</td>
+            <td className="coordinatorTH coordinatorTableTopLeft"><p className="coordinatorHeaderText font-weight-bold">Lawyer Name</p></td>
+            <td className="coordinatorTH coordinatorTableTopMiddle"><p className="coordinatorHeaderText font-weight-bold">Case</p></td>
+            <td className="coordinatorTH coordinatorTableTopRight"><p className="coordinatorHeaderText font-weight-bold"></p></td>
           </tr>
           {caseComponent}
         </table>

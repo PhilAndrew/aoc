@@ -18,6 +18,7 @@ export default class CoordinatorCase extends React.Component {
       practiceArea: props.singleCase.practiceArea,
       jurisdictions: props.singleCase.jurisdictions,
       languages: props.singleCase.languages,
+      lastValue: props.lastValue,
     };
   }
 
@@ -31,6 +32,7 @@ export default class CoordinatorCase extends React.Component {
       practiceArea: newProps.singleCase.practiceArea,
       jurisdictions: newProps.singleCase.jurisdictions,
       languages: newProps.singleCase.languages,
+      lastValue: newProps.lastValue,
     });
   }
 
@@ -112,14 +114,16 @@ export default class CoordinatorCase extends React.Component {
   }
 
   render() {
-    const { lawyerName, title, details, image, applied } = this.state;
+    const { lawyerName, title, details, image, applied, lastValue } = this.state;
     return(
       <tr>
-        <td className="coordinatorTD">
-          {lawyerName}
+        <td className={`coordinatorTD ${lastValue ? 'coordinatorTableBottomLeft' : 'coordinatorTableLeft'}`}>
+          <p>{lawyerName}</p>
         </td>
-        <td className="coordinatorTD">
-          {title}
+        <td className={`coordinatorTD ${lastValue ? 'coordinatorTableBottomMiddle' : ''}`}>
+          <a href="#">
+            <p className="coordinatorTableTitle">{title}</p>
+          </a>
           <div className="tags-grid">
             {this.renderPracticeArea()}
             {this.renderJurisdictions()}
@@ -127,9 +131,9 @@ export default class CoordinatorCase extends React.Component {
             {this.renderPriority()}
           </div>
         </td>
-        <td className="coordinatorTD">
-          <button className="buttonCaseList" type="submit" onClick={this.approveHandleClick}>Approve</button>
-          <button className="buttonCaseList grayButtonCaseList" type="submit" onClick={this.rejectHandleClick}>Reject</button>
+        <td className={`coordinatorTD ${lastValue ? 'coordinatorTableBottomRight' : 'coordinatorTableRight'}`}>
+          <button className="buttonCaseList buttonCoordinatorTable" type="submit" onClick={this.approveHandleClick}>Approve</button>
+          <button className="buttonCaseList grayButtonCaseList buttonCoordinatorTable" type="submit" onClick={this.rejectHandleClick}>Reject</button>
         </td>
       </tr>
     );

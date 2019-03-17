@@ -408,16 +408,72 @@ height: 1000px;
 }
 
 .coordinatorTable {
-  border-collapse: collapse;
-  border: 1px solid black;
+  border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
 }
 
 .coordinatorTH {
-  border: 1px solid black;
+  border: 1px solid #dee2e6 !important;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background: 
 }
 
 .coordinatorTD {
-  border: 1px solid black;
+  border: 1px solid #dee2e6 !important;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.coordinatorTableTopLeft {
+  border-width: 0px 1px 1px 0px !important; 
+  width: 13%;
+}
+
+.coordinatorTableTopMiddle {
+  border-width: 0px 1px 1px 1px !important;
+  width: 65%;
+}
+
+.coordinatorTableTopRight {
+  border-width: 0px 0px 1px 1px !important;
+  max-width: 22%;
+}
+
+.coordinatorTableBottomRight {
+  border-width: 1px 0px 0px 1px !important;
+}
+
+.coordinatorTableBottomMiddle {
+  border-width: 1px 1px 0px 1px !important;
+}
+
+.coordinatorTableBottomLeft {
+  border-width: 1px 1px 0px 0px !important;
+}
+
+.coordinatorTableRight {
+  border-width: 1px 0px 1px 1px !important;
+}
+
+.coordinatorTableLeft {
+  border-width: 1px 1px 1px 0px !important;
+}
+
+.coordinatorTableTitle {
+  margin-bottom: 1em;
+}
+
+.buttonCoordinatorTable {
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  margin-bottom: 0em;
 }
 
 .mylogo {
