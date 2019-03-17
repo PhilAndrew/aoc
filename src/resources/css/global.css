@@ -152,7 +152,6 @@ margin-bottom: 15px !important;
   padding-bottom:10px;
   padding-top: 5px;
   box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
-  display: inline-block;
 }
 
 .ngo-case button {
@@ -388,11 +387,6 @@ height: 1000px;
 
 .share-button {
   margin-right: 10px;
-}
-
-.imgLogo {
-  margin-bottom: auto;
-  margin-top: auto;
 }
 
 .DayPickerInput {
