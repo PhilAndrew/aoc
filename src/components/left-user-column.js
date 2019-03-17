@@ -138,11 +138,6 @@ export default class LeftUserColumn extends React.Component {
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-12">
-              <h3 className="subtitle">What goes here?</h3>
-            </div>
-          </div>
 
         </div>
       );
