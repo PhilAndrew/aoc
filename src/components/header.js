@@ -45,7 +45,7 @@ export default class Header extends PureComponent {
     const isLoggedIn = Authenticator.isLoggedIn();
     if (isLoggedIn) {
       let userType = 'User';
-      if (cookie.getItem('userType') === 'ngo') userType = 'Non-profit';
+      if (cookie.getItem('userType') === 'ngo') userType = 'Non-Profit';
       if (cookie.getItem('userType') === 'lawyer') userType = 'Lawyer';
       if (cookie.getItem('userType') === 'coordinator') userType = 'Coordinator';
       return (
@@ -265,7 +265,7 @@ export default class Header extends PureComponent {
               </div>
               <div className={`navbar-menu ${open ? 'is-active' : ''}`}>
                 <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
-                  <p className="header-text">Non-profits</p>
+                  <p className="header-text">Non-Profits</p>
                 </Link>
                 <Link className="navbar-item" to="/about-us" onClick={() => this.closeMenuBar()}>
                   <p className="header-text">Lawyers</p>
