@@ -79,7 +79,7 @@ export default class Header extends PureComponent {
           <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
             <div className="container header">
               <div className="navbar-brand">
-                <Link to="/" className=" navbar-item"><img src={Logo} /></Link>
+              <Link to="/" className=" navbar-item mylogo2"><img className="mylogo" src={Logo} /></Link>
                 <button
                   type="button"
                   onClick={e => this.toggleMenuBar(e)}
@@ -186,7 +186,7 @@ export default class Header extends PureComponent {
           <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
             <div className="container header">
               <div className="navbar-brand">
-                <Link to="/" className=" navbar-item"><img src={Logo} /></Link>
+              <Link to="/" className=" navbar-item mylogo2"><img className="mylogo" src={Logo} /></Link>
                 <button
                   type="button"
                   onClick={e => this.toggleMenuBar(e)}
@@ -241,7 +241,7 @@ export default class Header extends PureComponent {
           <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
             <div className="container header">
               <div className="navbar-brand">
-                <Link to="/" className=" navbar-item"><img src={Logo} /></Link>
+              <Link to="/" className=" navbar-item mylogo2"><img className="mylogo" src={Logo} /></Link>
                 <button
                   type="button"
                   onClick={e => this.toggleMenuBar(e)}
