@@ -59,7 +59,7 @@ export default class Header extends PureComponent {
       return (
         <div>
           <button type="submit" className="button is-link margin-right-5px login-button">Login</button>
-          <button type="submit" className="button is-link margin-right-5px login-button">Signup</button>"
+          <button type="submit" className="button is-link margin-right-5px login-button">Signup</button>
         </div>
       );
     }
@@ -273,10 +273,19 @@ export default class Header extends PureComponent {
               </div>
               <div className={`navbar-menu ${open ? 'is-active' : ''}`}>
                 <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
-                  <p className="header-text">Home</p>
+                  <p className="header-text">Non-profits</p>
                 </Link>
                 <Link className="navbar-item" to="/about-us" onClick={() => this.closeMenuBar()}>
-                  <p className="header-text">About Us</p>
+                  <p className="header-text">Lawyers</p>
+                </Link>
+                <Link className="navbar-item" to="/about-us" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Law Firms</p>
+                </Link>
+                <Link className="navbar-item" to="/about-us" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Resources</p>
+                </Link>
+                <Link className="navbar-item" to="/about-us" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Success Stories</p>
                 </Link>
               </div>
               {/* <SearchBar /> */}
