@@ -27,7 +27,7 @@ footer.footer a {
   font-family:
   "Open Sans", sans-serif
   ;
-  
+
 font-size: 32px;
 line-height: 35px;
 font-weight: bold;
@@ -42,7 +42,7 @@ margin-bottom: 15px !important;
 }
 
 .bordered {
- 
+
 }
 
 .profile-photo {
@@ -96,7 +96,7 @@ margin-bottom: 15px !important;
   margin: 0px !important;
   padding: 0px;
   padding-right: 10px;
-  
+
 }
 
 .navbar-item {
@@ -268,12 +268,12 @@ height: 1000px;
   display: inline-block;
   color: #1976D2;
   background-color: white;
-  
+
   border: 2px solid #1976D2;
   border-radius: 38px;
-  
+
   min-width: 4em;
-  
+
   padding-left: 1em;
   padding-right: 1em;
   margin-left:0em;
@@ -282,7 +282,7 @@ height: 1000px;
   margin-bottom: 0.25em;
 
   text-align: center;
-  
+
   transition: color 0.25s ease-in,
     background-color 0.25s ease-in,
     transform 0.3s ease-out;
@@ -336,8 +336,14 @@ height: 1000px;
 /* Active state animation applied here */
 .buttonCaseList:active {
   -webkit-animation: active 1200ms ease 1 alternate;
-  animation: active 1200ms ease 1 alternate; 
+  animation: active 1200ms ease 1 alternate;
   background: rgb(18, 91, 163);
 }
 .grayButtonCaseList { background: #D2D2D2; }
 .grayButtonCaseList:active { background: #b9b9b9; }
+
+
+.homepageSubtitle {
+ font-size: 26px;
+ clear: left !important;
+}
