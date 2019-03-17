@@ -136,31 +136,33 @@ export default class NgoCase extends React.Component {
     return (
       <div className="row">
         <div className="col-md-12">
-          <div className="border ngo-case">
-            <div className="ngo-case-top-header">
-              <a href="#" className="case-title">
-                {title}
-              </a>
-              <a href="#" className="float-right">
-                <img alt="" src={image} className="rounded img-fluid mt-lg-4" />
-              </a>
-            </div>
-            <div className="case-description">
-              <p>{details}</p>
-            </div>
-
-            <div className="buttons">
-              <button className="buttonCaseList" type="submit">Details</button>
-              <button className="buttonCaseList grayButtonCaseList" type="submit">Remove</button>
-            </div>
-            <div>
-              <div className="tags-grid">
-                {this.renderPracticeArea()}
-                {this.renderLegalSkill()}
-                {this.renderJurisdictions()}
-                {this.renderLanguages()}
-                {this.renderPriority()}
+          <div className="border ngo-case clearfix">
+            <div className="col-8">
+              <div className="ngo-case-top-header">
+                <a href="#" className="case-title">
+                  {title}
+                </a>
               </div>
+              <div className="case-description">
+                <p>{details}</p>
+              </div>
+
+              <div className="buttons">
+                <button className="buttonCaseList" type="submit">Details</button>
+                <button className="buttonCaseList grayButtonCaseList" type="submit">Remove</button>
+              </div>
+              <div>
+                <div className="tags-grid">
+                  {this.renderPracticeArea()}
+                  {this.renderLegalSkill()}
+                  {this.renderJurisdictions()}
+                  {this.renderLanguages()}
+                  {this.renderPriority()}
+                </div>
+              </div>
+            </div>
+            <div className="col-4">
+              <img alt="" src={image} className="rounded img-fluid" />
             </div>
           </div>
         </div>

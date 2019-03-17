@@ -35,13 +35,13 @@ export default class NgoCase extends React.Component {
       practiceArea: newProps.singleCase.practiceArea,
       legalSkill: newProps.singleCase.legalSkill,
       jurisdictions: newProps.singleCase.jurisdictions,
-      languages: newProps.singleCase.languages
+      languages: newProps.singleCase.languages,
     });
   }
 
   handleChange = () => {
     this.setState({
-      applied: true
+      applied: true,
     });
   }
 
@@ -149,30 +149,32 @@ export default class NgoCase extends React.Component {
     return (
       <div className="row">
         <div className="col-md-12">
-          <div className={`border ngo-case ${applied ? 'pendingCase' : null}`}>
-            <div className="ngo-case-top-header">
-              <a href="#" className="case-title">
-                {title}
-              </a>
-              <a href="#" className="float-right">
-                <img alt="" src={image} className="rounded img-fluid mt-lg-4" />
-              </a>
-            </div>
-            <div className="case-description">
-              <p>{details}</p>
-            </div>
-
-            <div className="buttons">
-              {button}
-            </div>
-            <div>
-              <div className="tags-grid">
-                {this.renderPracticeArea()}
-                {this.renderLegalSkill()}
-                {this.renderJurisdictions()}
-                {this.renderLanguages()}
-                {this.renderPriority()}
+          <div className={`border ngo-case clearfix ${applied ? 'pendingCase' : null}`}>
+            <div className="col-8">
+              <div className="ngo-case-top-header">
+                <a href="#" className="case-title">
+                  {title}
+                </a>
               </div>
+              <div className="case-description">
+                <p>{details}</p>
+              </div>
+
+              <div className="buttons">
+                {button}
+              </div>
+              <div>
+                <div className="tags-grid">
+                  {this.renderPracticeArea()}
+                  {this.renderLegalSkill()}
+                  {this.renderJurisdictions()}
+                  {this.renderLanguages()}
+                  {this.renderPriority()}
+                </div>
+              </div>
+            </div>
+            <div className="col-4">
+              <img alt="" src={image} className="rounded imgLogo" />
             </div>
           </div>
         </div>

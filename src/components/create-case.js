@@ -126,12 +126,15 @@ class DayInput extends React.Component {
     const { selectedDay } = this.state;
 
     return (
-      <DayPickerInput
-        onDayChange={selectedDay => this.handleChange(selectedDay)}
-        formatDate={formatDate}
-        parseDate={parseDate}
-        placeholder='MM/DD/YYYY'
-      />
+      <div>
+        <DayPickerInput
+          onDayChange={selectedDay => this.handleChange(selectedDay)}
+          formatDate={formatDate}
+          parseDate={parseDate}
+          placeholder='MM/DD/YYYY'
+          inputProps={{ style: {  width: '100%', borderWidth: '1px', height: '2.4em', borderStyle: 'solid', borderColor: '#c9c9c9', borderRadius: '4px', padding: '0.5em', outline: 'none' } }}
+        />
+      </div>
     );
   }
 }
@@ -161,34 +164,34 @@ export default () => (
           <div className="mb-3">
             <label htmlFor="legal-skill">Legal skill</label>
 
-            <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="a1" name="defaultExampleRadios2" />
-            <label class="custom-control-label" for="a1">Advice</label>
+            <div className="custom-control custom-checkbox">
+            <input type="checkbox" className="custom-control-input" id="a1" name="defaultExampleRadios2" />
+            <label className="custom-control-label" for="a1">Advice</label>
           </div>
 
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="a2" name="defaultExampleRadios2" />
-            <label class="custom-control-label" for="a2">Advocacy</label>
+          <div className="custom-control custom-checkbox">
+            <input type="checkbox" className="custom-control-input" id="a2" name="defaultExampleRadios2" />
+            <label className="custom-control-label" for="a2">Advocacy</label>
           </div>
 
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="a3" name="defaultExampleRadios2" />
-            <label class="custom-control-label" for="a3">Draft/Review Legal Documentation</label>
+          <div className="custom-control custom-checkbox">
+            <input type="checkbox" className="custom-control-input" id="a3" name="defaultExampleRadios2" />
+            <label className="custom-control-label" for="a3">Draft/Review Legal Documentation</label>
           </div>
 
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="a4" name="defaultExampleRadios2" />
-            <label class="custom-control-label" for="a4">Direct Representation</label>
+          <div className="custom-control custom-checkbox">
+            <input type="checkbox" className="custom-control-input" id="a4" name="defaultExampleRadios2" />
+            <label className="custom-control-label" for="a4">Direct Representation</label>
           </div>
 
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="a5" name="defaultExampleRadios2" />
-            <label class="custom-control-label" for="a5">Research</label>
+          <div className="custom-control custom-checkbox">
+            <input type="checkbox" className="custom-control-input" id="a5" name="defaultExampleRadios2" />
+            <label className="custom-control-label" for="a5">Research</label>
           </div>
 
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="a6" name="defaultExampleRadios2" />
-            <label class="custom-control-label" for="a6">Training</label>
+          <div className="custom-control custom-checkbox">
+            <input type="checkbox" className="custom-control-input" id="a6" name="defaultExampleRadios2" />
+            <label className="custom-control-label" for="a6">Training</label>
           </div>
 
         </div>
@@ -203,17 +206,17 @@ export default () => (
           </div>
           <div className="mb-3">
           <label htmlFor="priority">Priority</label>
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="one" name="defaultExampleRadios" />
-            <label class="custom-control-label" for="one">Immediate</label>
+          <div className="custom-control custom-radio">
+            <input type="radio" className="custom-control-input" id="one" name="defaultExampleRadios" />
+            <label className="custom-control-label" for="one">Immediate</label>
           </div>
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="two" name="defaultExampleRadios" />
-            <label class="custom-control-label" for="two">Flexible</label>
+          <div className="custom-control custom-radio">
+            <input type="radio" className="custom-control-input" id="two" name="defaultExampleRadios" />
+            <label className="custom-control-label" for="two">Flexible</label>
           </div>
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="three" name="defaultExampleRadios" />
-            <label class="custom-control-label" for="three">Long term</label>
+          <div className="custom-control custom-radio">
+            <input type="radio" className="custom-control-input" id="three" name="defaultExampleRadios" />
+            <label className="custom-control-label" for="three">Long term</label>
           </div>
           </div>
           <div className="mb-3">

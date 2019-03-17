@@ -152,6 +152,7 @@ margin-bottom: 15px !important;
   padding-bottom:10px;
   padding-top: 5px;
   box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+  display: inline-block;
 }
 
 .ngo-case button {
@@ -387,4 +388,23 @@ height: 1000px;
 
 .share-button {
   margin-right: 10px;
+}
+
+.imgLogo {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.DayPickerInput {
+  width: 100% !important;
+  border-width: 1px !important;
+  height: 2.4em !important;
+  border-color: #c9c9c9 !important;
+  border-radius: 4px !important;
+}
+
+.DayPickerInput:focus {
+  border-color:#1b78f9 !important;
+  border-width: 2px !important;
+  outline:none !important;
 }
