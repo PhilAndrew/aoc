@@ -342,8 +342,12 @@ height: 1000px;
 .grayButtonCaseList { background: #D2D2D2; }
 .grayButtonCaseList:active { background: #b9b9b9; }
 
-
 .homepageSubtitle {
  font-size: 26px;
  clear: left !important;
+}
+
+.pendingCase {
+  border-color: blue !important;
+  border-width: 3px !important;
 }

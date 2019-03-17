@@ -149,7 +149,7 @@ export default class NgoCase extends React.Component {
     return (
       <div className="row">
         <div className="col-md-12">
-          <div className="border ngo-case">
+          <div className={`border ngo-case ${applied ? 'pendingCase' : null}`}>
             <div className="ngo-case-top-header">
               <a href="#" className="case-title">
                 {title}
