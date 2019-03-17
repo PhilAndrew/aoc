@@ -126,11 +126,11 @@ class DayInput extends React.Component {
     const { selectedDay } = this.state;
 
     return (
-      <DayPickerInput 
+      <DayPickerInput
         onDayChange={selectedDay => this.handleChange(selectedDay)}
         formatDate={formatDate}
         parseDate={parseDate}
-        placeholder='MM/DD/YYYY' 
+        placeholder='MM/DD/YYYY'
       />
     );
   }
@@ -157,10 +157,42 @@ export default () => (
             <label htmlFor="practice-area">Practice Area</label>
             <PracticeAreaSelect />
           </div>
+
           <div className="mb-3">
             <label htmlFor="legal-skill">Legal skill</label>
-            <LegalSkillSelect />
+
+            <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="a1" name="defaultExampleRadios2" />
+            <label class="custom-control-label" for="a1">Advice</label>
           </div>
+
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="a2" name="defaultExampleRadios2" />
+            <label class="custom-control-label" for="a2">Advocacy</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="a3" name="defaultExampleRadios2" />
+            <label class="custom-control-label" for="a3">Draft/Review Legal Documentation</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="a4" name="defaultExampleRadios2" />
+            <label class="custom-control-label" for="a4">Direct Representation</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="a5" name="defaultExampleRadios2" />
+            <label class="custom-control-label" for="a5">Research</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="a6" name="defaultExampleRadios2" />
+            <label class="custom-control-label" for="a6">Training</label>
+          </div>
+
+        </div>
+
           <div className="mb-3">
             <label htmlFor="jurisdiction">Jurisdiction</label>
             <JurisdictionSelect />
@@ -168,15 +200,21 @@ export default () => (
           <div className="mb-3">
             <label htmlFor="priority">Relevant Language</label>
             <LanguageSelect />
-          </div>    
+          </div>
           <div className="mb-3">
-            <label htmlFor="priority">Priority</label>
-            <select className="custom-select d-block w-100" id="priority" required>
-              <option defaultValue="">Choose...</option>
-              <option>Immediate</option>
-              <option>Flexible</option>
-              <option>Long term</option>
-            </select>
+          <label htmlFor="priority">Priority</label>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="one" name="defaultExampleRadios" />
+            <label class="custom-control-label" for="one">Immediate</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="two" name="defaultExampleRadios" />
+            <label class="custom-control-label" for="two">Flexible</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="three" name="defaultExampleRadios" />
+            <label class="custom-control-label" for="three">Long term</label>
+          </div>
           </div>
           <div className="mb-3">
             <label htmlFor="deadline">Expected Date of Completion</label>
@@ -188,10 +226,11 @@ export default () => (
             <textarea id="description" className="form-control" rows="3" placeholder="" required></textarea>
           </div>
           <hr className="mb-4" />
-          <button className="btn btn-primary btn-lg btn-block" type="submit">Share</button>
+          <button className="btn btn-primary btn-lg share-button" type="submit">Share to everyone</button>
+          <button className="btn btn-primary btn-lg share-button" type="submit">Share to my Connections</button>
         </form>
         </div>
-      </div> 
+      </div>
 
     </div>
   </GuestLayout>
