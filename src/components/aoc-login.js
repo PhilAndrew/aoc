@@ -176,7 +176,8 @@ export default class AocLogin extends React.Component {
                 </div>
               </div>
               </div>
-        <div className="col-md-3 user-login-area">
+        <div className="col-md-3">
+        <div className="user-login-area">
         <div className="field">
                 <label className="label" htmlFor="username">
                   Username
@@ -216,7 +217,7 @@ export default class AocLogin extends React.Component {
                   <button type="submit" className="button is-link margin-right-5px login-button" onClick={e => this.loginUser(e)}>Login</button>
                 </div>
               </div>
-        </div>
+              </div></div>
 
         </section>
 
