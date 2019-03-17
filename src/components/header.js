@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import User from '../resources/img/user.png';
+import cookie from '../libs/cookie';
 // import SearchBar from './search-bar';
 import Authenticator from './fake-authenticator';
 
@@ -56,62 +57,230 @@ export default class Header extends PureComponent {
 
   render() {
     const { open, value } = this.state;
-    return (
-      <div className="sticky-top">
-        <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
-          <div className="container header">
-            <div className="navbar-brand">
-              <Link to="/" className=" navbar-item"><p className="header-text header-logo-text"><strong>AOC</strong></p></Link>
-              <button
-                type="button"
-                onClick={e => this.toggleMenuBar(e)}
-                data-toggle="collapse"
-                data-target="#navbarColor01"
-                aria-controls="navbarColor01"
-                className={`navbar-burger navbar-toggler ${open ? 'is-active' : ''}`}
-                aria-label="menu"
-                aria-expanded="true"
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  outline: 'none',
-                }}
-              >
-                <span className="navbar-toggler-icon" />
-                <span aria-hidden="false" />
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-              </button>
-            </div>
-            <div className={`navbar-menu ${open ? 'is-active' : ''}`}>
-              <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
-                <p className="header-text">Home</p>
-              </Link>
-              <Link className="navbar-item" to="/about-us" onClick={() => this.closeMenuBar()}>
-                <p className="header-text">About Us</p>
-              </Link>
-              <Link className="navbar-item" to="/create-case" onClick={() => this.closeMenuBar()}>
-                <p className="header-text">Create Case</p>
-              </Link>              
-              <Link className="navbar-item" to="/case-history" onClick={() => this.closeMenuBar()}>
-                <p className="header-text">Cases</p>
-              </Link>
-            </div>
-            {/* <SearchBar /> */}
-            <div className="header-right d-inline-flex" style={{ justifyContent: 'flex-end', float: 'right', marginRight: '15px' }}>
-              {/*<div className="w-auto">
-                <form className="form-inline" onSubmit={this.handleSubmit}>
-                  <input className="form-control my-0 my-md-3 mr-sm-2 w-auto" type="text" value={value} onChange={this.handleChange} placeholder="Search" />
-                  <button className="btn btn-secondary my-0 my-md-3 w-auto" type="submit">Search</button>
-                </form>
-              </div>*/}
-              <div className="ml-4 my-0 my-md-3">
-                {this.myWhat()}
+    if (cookie.getItem('userType') === 'ngo') {
+      return (
+        <div className="sticky-top">
+          <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
+            <div className="container header">
+              <div className="navbar-brand">
+                <Link to="/" className=" navbar-item"><p className="header-text header-logo-text"><strong>AOC</strong></p></Link>
+                <button
+                  type="button"
+                  onClick={e => this.toggleMenuBar(e)}
+                  data-toggle="collapse"
+                  data-target="#navbarColor01"
+                  aria-controls="navbarColor01"
+                  className={`navbar-burger navbar-toggler ${open ? 'is-active' : ''}`}
+                  aria-label="menu"
+                  aria-expanded="true"
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    outline: 'none',
+                  }}
+                >
+                  <span className="navbar-toggler-icon" />
+                  <span aria-hidden="false" />
+                  <span aria-hidden="true" />
+                  <span aria-hidden="true" />
+                </button>
+              </div>
+              <div className={`navbar-menu ${open ? 'is-active' : ''}`}>
+                <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Home</p>
+                </Link>
+                <Link className="navbar-item" to="/about-us" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">About Us</p>
+                </Link>
+                <Link className="navbar-item" to="/create-case" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Create Case</p>
+                </Link>              
+                <Link className="navbar-item" to="/case-history" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Cases</p>
+                </Link>
+              </div>
+              {/* <SearchBar /> */}
+              <div className="header-right d-inline-flex" style={{ justifyContent: 'flex-end', float: 'right', marginRight: '15px' }}>
+                {/*<div className="w-auto">
+                  <form className="form-inline" onSubmit={this.handleSubmit}>
+                    <input className="form-control my-0 my-md-3 mr-sm-2 w-auto" type="text" value={value} onChange={this.handleChange} placeholder="Search" />
+                    <button className="btn btn-secondary my-0 my-md-3 w-auto" type="submit">Search</button>
+                  </form>
+                </div>*/}
+                <div className="ml-4 my-0 my-md-3">
+                  {this.myWhat()}
+                </div>
               </div>
             </div>
-          </div>
-        </nav>
-      </div>
-    );
+          </nav>
+        </div>
+      );
+    } else if (cookie.getItem('userType') === 'lawyer') {
+      return (
+        <div className="sticky-top">
+          <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
+            <div className="container header">
+              <div className="navbar-brand">
+                <Link to="/" className=" navbar-item"><p className="header-text header-logo-text"><strong>AOC</strong></p></Link>
+                <button
+                  type="button"
+                  onClick={e => this.toggleMenuBar(e)}
+                  data-toggle="collapse"
+                  data-target="#navbarColor01"
+                  aria-controls="navbarColor01"
+                  className={`navbar-burger navbar-toggler ${open ? 'is-active' : ''}`}
+                  aria-label="menu"
+                  aria-expanded="true"
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    outline: 'none',
+                  }}
+                >
+                  <span className="navbar-toggler-icon" />
+                  <span aria-hidden="false" />
+                  <span aria-hidden="true" />
+                  <span aria-hidden="true" />
+                </button>
+              </div>
+              <div className={`navbar-menu ${open ? 'is-active' : ''}`}>
+                <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Home</p>
+                </Link>
+                <Link className="navbar-item" to="/about-us" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">About Us</p>
+                </Link>
+                <Link className="navbar-item" to="/case-history" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Cases</p>
+                </Link>
+              </div>
+              {/* <SearchBar /> */}
+              <div className="header-right d-inline-flex" style={{ justifyContent: 'flex-end', float: 'right', marginRight: '15px' }}>
+                {/*<div className="w-auto">
+                  <form className="form-inline" onSubmit={this.handleSubmit}>
+                    <input className="form-control my-0 my-md-3 mr-sm-2 w-auto" type="text" value={value} onChange={this.handleChange} placeholder="Search" />
+                    <button className="btn btn-secondary my-0 my-md-3 w-auto" type="submit">Search</button>
+                  </form>
+                </div>*/}
+                <div className="ml-4 my-0 my-md-3">
+                  {this.myWhat()}
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      );
+    } else if (cookie.getItem('userType') === 'coordinator') {
+      return (
+        <div className="sticky-top">
+          <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
+            <div className="container header">
+              <div className="navbar-brand">
+                <Link to="/" className=" navbar-item"><p className="header-text header-logo-text"><strong>AOC</strong></p></Link>
+                <button
+                  type="button"
+                  onClick={e => this.toggleMenuBar(e)}
+                  data-toggle="collapse"
+                  data-target="#navbarColor01"
+                  aria-controls="navbarColor01"
+                  className={`navbar-burger navbar-toggler ${open ? 'is-active' : ''}`}
+                  aria-label="menu"
+                  aria-expanded="true"
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    outline: 'none',
+                  }}
+                >
+                  <span className="navbar-toggler-icon" />
+                  <span aria-hidden="false" />
+                  <span aria-hidden="true" />
+                  <span aria-hidden="true" />
+                </button>
+              </div>
+              <div className={`navbar-menu ${open ? 'is-active' : ''}`}>
+                <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Home</p>
+                </Link>
+                <Link className="navbar-item" to="/about-us" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">About Us</p>
+                </Link>
+                <Link className="navbar-item" to="/create-case" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Create Case</p>
+                </Link>              
+                <Link className="navbar-item" to="/case-history" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Cases</p>
+                </Link>
+              </div>
+              {/* <SearchBar /> */}
+              <div className="header-right d-inline-flex" style={{ justifyContent: 'flex-end', float: 'right', marginRight: '15px' }}>
+                {/*<div className="w-auto">
+                  <form className="form-inline" onSubmit={this.handleSubmit}>
+                    <input className="form-control my-0 my-md-3 mr-sm-2 w-auto" type="text" value={value} onChange={this.handleChange} placeholder="Search" />
+                    <button className="btn btn-secondary my-0 my-md-3 w-auto" type="submit">Search</button>
+                  </form>
+                </div>*/}
+                <div className="ml-4 my-0 my-md-3">
+                  {this.myWhat()}
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      );
+    } else {
+      return (
+        <div className="sticky-top">
+          <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
+            <div className="container header">
+              <div className="navbar-brand">
+                <Link to="/" className=" navbar-item"><p className="header-text header-logo-text"><strong>AOC</strong></p></Link>
+                <button
+                  type="button"
+                  onClick={e => this.toggleMenuBar(e)}
+                  data-toggle="collapse"
+                  data-target="#navbarColor01"
+                  aria-controls="navbarColor01"
+                  className={`navbar-burger navbar-toggler ${open ? 'is-active' : ''}`}
+                  aria-label="menu"
+                  aria-expanded="true"
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    outline: 'none',
+                  }}
+                >
+                  <span className="navbar-toggler-icon" />
+                  <span aria-hidden="false" />
+                  <span aria-hidden="true" />
+                  <span aria-hidden="true" />
+                </button>
+              </div>
+              <div className={`navbar-menu ${open ? 'is-active' : ''}`}>
+                <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">Home</p>
+                </Link>
+                <Link className="navbar-item" to="/about-us" onClick={() => this.closeMenuBar()}>
+                  <p className="header-text">About Us</p>
+                </Link>
+              </div>
+              {/* <SearchBar /> */}
+              <div className="header-right d-inline-flex" style={{ justifyContent: 'flex-end', float: 'right', marginRight: '15px' }}>
+                {/*<div className="w-auto">
+                  <form className="form-inline" onSubmit={this.handleSubmit}>
+                    <input className="form-control my-0 my-md-3 mr-sm-2 w-auto" type="text" value={value} onChange={this.handleChange} placeholder="Search" />
+                    <button className="btn btn-secondary my-0 my-md-3 w-auto" type="submit">Search</button>
+                  </form>
+                </div>*/}
+                <div className="ml-4 my-0 my-md-3">
+                  {this.myWhat()}
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      );
+    }
+
   }
 }

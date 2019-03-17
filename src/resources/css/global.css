@@ -341,3 +341,8 @@ height: 1000px;
 }
 .grayButtonCaseList { background: #D2D2D2; }
 .grayButtonCaseList:active { background: #b9b9b9; }
+
+.pendingCase {
+  border-color: blue !important;
+  border-width: 3px !important;
+}

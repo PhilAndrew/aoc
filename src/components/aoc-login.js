@@ -42,6 +42,8 @@ export default class AocLogin extends React.Component {
         userNameValue: '',
         passwordValue: ''
       });
+
+    window.location.reload();
   }
 /*
   handleSubmit(e) {
@@ -111,6 +113,8 @@ export default class AocLogin extends React.Component {
           loggedIn: true,
         });
       } 
+      console.log('hi');
+      window.location.reload();
       }
   
 
