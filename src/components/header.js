@@ -13,20 +13,20 @@ export default class Header extends PureComponent {
       search: '',
     };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({ search: event.target.value });
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     alert('A name was submitted: ' + this.state.search);
     event.preventDefault();
   }
 
-  toggleMenuBar(e) {
+  toggleMenuBar = (e) => {
     const { open } = this.state;
     if (e && e.preventDefault) {
       e.preventDefault();
@@ -36,19 +36,34 @@ export default class Header extends PureComponent {
     });
   }
 
-  closeMenuBar() {
+  closeMenuBar = () => {
     this.setState({ open: false });
   }
 
-  myWhat() {
-    //if (Authenticator.isLoggedIn())
-    return (
-      <div>                
-      <a href="#" style={{ float: 'left' }}>
-      <img src={User} alt="User" className="" style={{ width: 35, marginRight: '8px', marginTop: '3px' }} onClick={event => { console.log('account details'); } } />
-      </a>
-      <button type="submit" className="button is-link margin-right-5px login-button">Welcome User</button>
-      </div>)
+  myWhat = () => {
+    const isLoggedIn = Authenticator.isLoggedIn();
+    if (isLoggedIn) {
+      let userType = 'User';
+      if (cookie.getItem('userType') === 'ngo') userType = 'Non-profit';
+      if (cookie.getItem('userType') === 'lawyer') userType = 'Lawyer';
+      if (cookie.getItem('userType') === 'coordinator') userType = 'Coordinator';
+      return (
+        <div>                
+          <a href="#" style={{ float: 'left' }}>
+            <img src={User} alt="User" className="" style={{ width: 35, marginRight: '8px', marginTop: '3px' }} onClick={event => { console.log('account details'); } } />
+          </a>
+          <button type="submit" className="button is-link margin-right-5px login-button">Welcome {userType}</button>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <button type="submit" className="button is-link margin-right-5px login-button">Login</button>
+          <button type="submit" className="button is-link margin-right-5px login-button">Signup</button>"
+        </div>
+      );
+    }
+
     //else return <div></div>
      /*     <Link className="navbar-item" to="/" onClick={() => this.closeMenuBar()}>
       <p className="header-text">Logout</p>
