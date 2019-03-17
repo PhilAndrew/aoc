@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class NgoCaseMenu extends React.Component {
+export default class NgoCasesMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

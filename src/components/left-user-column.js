@@ -196,6 +196,21 @@ export default class LeftUserColumn extends React.Component {
     if (cookie.getItem('userType') === 'coordinator') {
       return (
         <div>
+          <div className="row">
+            <div className="col-md-12">
+              <h3 className="subtitle">Your Non-profit Status</h3>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="row">
+                <div className="col-md-12">
+                <label className="tag-button">You have 4 Pending cases.</label>
+                <label className="tag-button">You have 8 Approved cases.</label>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       );
     }

@@ -406,3 +406,16 @@ height: 1000px;
   border-width: 2px !important;
   outline:none !important;
 }
+
+.coordinatorTable {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.coordinatorTH {
+  border: 1px solid black;
+}
+
+.coordinatorTD {
+  border: 1px solid black;
+}

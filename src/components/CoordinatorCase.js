@@ -1,8 +1,4 @@
 import React from 'react';
-import GuestLayout from './guest-layout';
-import localStyles from './local-styles.css';
-import Select from 'react-select';
-import CatDog from '../resources/img/phil.jpeg';
 
 const countries = require('../resources/json/countries').default.countries;
 const languages = require('../resources/json/languages').default.languages;
@@ -10,31 +6,31 @@ const optionsPracticeArea = require('../resources/json/optionsPracticeArea').def
 const optionsLegalSkill = require('../resources/json/optionsLegalSkill').default.optionsLegalSkill;
 const prioritySelect = require('../resources/json/prioritySelect').default.prioritySelect;
 
-export default class NgoCase extends React.Component {
+export default class CoordinatorCase extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      lawyerName: props.singleCase.lawyerName,
       title: props.singleCase.title,
       image: props.singleCase.image,
       details: props.singleCase.details,
       priority: props.singleCase.priority,
       practiceArea: props.singleCase.practiceArea,
-      legalSkill: props.singleCase.legalSkill,
       jurisdictions: props.singleCase.jurisdictions,
-      languages: props.singleCase.languages
+      languages: props.singleCase.languages,
     };
   }
 
   componentWillReceiveProps(newProps) {
     this.setState({
+      lawyerName: newProps.singleCase.lawyerName,
       title: newProps.singleCase.title,
       image: newProps.singleCase.image,
       details: newProps.singleCase.details,
       priority: newProps.singleCase.priority,
       practiceArea: newProps.singleCase.practiceArea,
-      legalSkill: newProps.singleCase.legalSkill,
       jurisdictions: newProps.singleCase.jurisdictions,
-      languages: newProps.singleCase.languages
+      languages: newProps.singleCase.languages,
     });
   }
 
@@ -53,28 +49,6 @@ export default class NgoCase extends React.Component {
           return (
             <p key={key} className="tag-button">
               {optionsPracticeArea[index].label}
-            </p>
-          );
-        })
-      );
-    }
-  }
-
-  renderLegalSkill = () => {
-    const { legalSkill } = this.state;
-    if (legalSkill) {
-      return (
-        legalSkill.map((tag, key) => {
-          let index = 0;
-          for (let i = 0; i < optionsLegalSkill.length;i++) {
-            if (optionsLegalSkill[i].value === tag) {
-              index = i;
-              break;
-            }
-          }
-          return (
-            <p key={key} className="tag-button">
-              {optionsLegalSkill[index].label}
             </p>
           );
         })
@@ -129,41 +103,35 @@ export default class NgoCase extends React.Component {
     );
   }
 
+  approveHandleClick = () => {
+    // Something
+  }
+
+  rejectHandleClick = () => {
+    // Something
+  }
 
   render() {
-    const { title, details, image } = this.state;
-    return (
-      <div className="row">
-        <div className="col-md-12">
-          <div className="border ngo-case">
-            <div className="ngo-case-top-header">
-              <a href="#" className="case-title">
-                {title}
-              </a>
-              <a href="#" className="float-right">
-                <img alt="" src={image} className="rounded img-fluid mt-lg-4" />
-              </a>
-            </div>
-            <div className="case-description">
-              <p>{details}</p>
-            </div>
-
-            <div className="buttons">
-              <button className="buttonCaseList" type="submit">Details</button>
-              <button className="buttonCaseList grayButtonCaseList" type="submit">Remove</button>
-            </div>
-            <div>
-              <div className="tags-grid">
-                {this.renderPracticeArea()}
-                {this.renderLegalSkill()}
-                {this.renderJurisdictions()}
-                {this.renderLanguages()}
-                {this.renderPriority()}
-              </div>
-            </div>
+    const { lawyerName, title, details, image, applied } = this.state;
+    return(
+      <tr>
+        <td className="coordinatorTD">
+          {lawyerName}
+        </td>
+        <td className="coordinatorTD">
+          {title}
+          <div className="tags-grid">
+            {this.renderPracticeArea()}
+            {this.renderJurisdictions()}
+            {this.renderLanguages()}
+            {this.renderPriority()}
           </div>
-        </div>
-      </div>
+        </td>
+        <td className="coordinatorTD">
+          <button className="buttonCaseList" type="submit" onClick={this.approveHandleClick}>Approve</button>
+          <button className="buttonCaseList grayButtonCaseList" type="submit" onClick={this.rejectHandleClick}>Reject</button>
+        </td>
+      </tr>
     );
   }
 }
