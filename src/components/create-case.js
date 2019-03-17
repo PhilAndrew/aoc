@@ -188,7 +188,7 @@ export default () => (
             <textarea id="description" className="form-control" rows="3" placeholder="" required></textarea>
           </div>
           <hr className="mb-4" />
-          <button className="btn btn-primary btn-lg btn-block" type="submit">Publish</button>
+          <button className="btn btn-primary btn-lg btn-block" type="submit">Share</button>
         </form>
         </div>
       </div> 
