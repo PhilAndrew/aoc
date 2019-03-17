@@ -3,6 +3,7 @@ import GuestLayout from './guest-layout';
 import localStyles from './local-styles.css';
 import Select from 'react-select';
 import CatDog from '../resources/img/phil.jpeg';
+import cookie from '../libs/cookie';
 
 const countries = require('../resources/json/countries').default.countries;
 const languages = require('../resources/json/languages').default.languages;
@@ -14,7 +15,7 @@ let countriesFixed = [];
 for (let i = 0; i < countries.length; i++) {
     countriesFixed.push({value: countries[i].name, label: countries[i].name});
 }
-  
+
 let languagesFixed = [];
 for (let i = 0; i < languages.length; i++) {
   languagesFixed.push({value: languages[i].name, label: languages[i].name});
@@ -118,54 +119,69 @@ export default class LeftUserColumn extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <div className="row">
-          <div className="col-md-12">
-            <h3 className="subtitle">Search</h3>
-          </div>
+    if (cookie.getItem('userType') === 'ngo') {
+      return (
+        <div>
         </div>
-        <div className="row search-left-user-column">
-          <div className="col-md-12">
-            <div className="row">
-              <div className="col-md-12">
-                <label htmlFor="search-cases">Search</label>
-                <input className="searchBoxCaseList" type="search" placeholder="Search Cases" onChange={this.props.searchChange} />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <label htmlFor="practice-area">Practice Area</label>
-                {this.PracticeAreaSelect()}
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <label htmlFor="practice-area">Jurisdiction</label>
-                {this.JurisdictionSelect()}
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <label htmlFor="practice-area">Priority</label>
-                {this.PrioritySelect()}
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <label htmlFor="practice-area">Legal Skill</label>
-                {this.LegalSkillSelect()}
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <label htmlFor="practice-area">Language</label>
-                {this.LanguageSelect()}
-              </div>
+      );
+    }
+    if (cookie.getItem('userType') === 'lawyer') {
+      return (
+        <div>
+          <div className="row">
+            <div className="col-md-12">
+              <h3 className="subtitle">Search</h3>
             </div>
           </div>
+          <div className="row search-left-user-column">
+            <div className="col-md-12">
+              <div className="row">
+                <div className="col-md-12">
+                  <label htmlFor="search-cases">Search</label>
+                  <input className="searchBoxCaseList" type="search" placeholder="Search Cases" onChange={this.props.searchChange} />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-12">
+                  <label htmlFor="practice-area">Practice Area</label>
+                  {this.PracticeAreaSelect()}
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-12">
+                  <label htmlFor="practice-area">Jurisdiction</label>
+                  {this.JurisdictionSelect()}
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-12">
+                  <label htmlFor="practice-area">Priority</label>
+                  {this.PrioritySelect()}
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-12">
+                  <label htmlFor="practice-area">Legal Skill</label>
+                  {this.LegalSkillSelect()}
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-12">
+                  <label htmlFor="practice-area">Language</label>
+                  {this.LanguageSelect()}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
+    if (cookie.getItem('userType') === 'coordinator') {
+      return (
+        <div>
+        </div>
+      );
+    }
+
   }
 }
