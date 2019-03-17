@@ -48,6 +48,7 @@ height: 2.77em;
   width: auto;
   padding: 0.2em;
   cursor: pointer;
+  color: black;
 }
 
 .pageHeadingSelectedTab {
@@ -129,9 +130,9 @@ margin-bottom: 15px !important;
 }
 
 .navbar-item img {
-  width: 240px !important;
-  height: 60px !important;
-  max-height: 60px !important;
+  width: 5em !important;
+  height: 4em !important;
+  max-height: 4em !important;
 }
 
 .navbar-item:hover {

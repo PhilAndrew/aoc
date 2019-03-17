@@ -4,6 +4,7 @@ import User from '../resources/img/user.png';
 import cookie from '../libs/cookie';
 // import SearchBar from './search-bar';
 import Authenticator from './fake-authenticator';
+import Logo from '../resources/img/logo.png';
 
 export default class Header extends PureComponent {
   constructor(props) {
@@ -78,7 +79,7 @@ export default class Header extends PureComponent {
           <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
             <div className="container header">
               <div className="navbar-brand">
-                <Link to="/" className=" navbar-item"><p className="header-text header-logo-text"><strong>AOC</strong></p></Link>
+                <Link to="/" className=" navbar-item"><img src={Logo} /></Link>
                 <button
                   type="button"
                   onClick={e => this.toggleMenuBar(e)}
@@ -133,7 +134,7 @@ export default class Header extends PureComponent {
           <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
             <div className="container header">
               <div className="navbar-brand">
-                <Link to="/" className=" navbar-item"><p className="header-text header-logo-text"><strong>AOC</strong></p></Link>
+                <Link to="/" className=" navbar-item"><img src={Logo} /></Link>
                 <button
                   type="button"
                   onClick={e => this.toggleMenuBar(e)}
@@ -185,7 +186,7 @@ export default class Header extends PureComponent {
           <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
             <div className="container header">
               <div className="navbar-brand">
-                <Link to="/" className=" navbar-item"><p className="header-text header-logo-text"><strong>AOC</strong></p></Link>
+                <Link to="/" className=" navbar-item"><img src={Logo} /></Link>
                 <button
                   type="button"
                   onClick={e => this.toggleMenuBar(e)}
@@ -240,7 +241,7 @@ export default class Header extends PureComponent {
           <nav className="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
             <div className="container header">
               <div className="navbar-brand">
-                <Link to="/" className=" navbar-item"><p className="header-text header-logo-text"><strong>AOC</strong></p></Link>
+                <Link to="/" className=" navbar-item"><img src={Logo} /></Link>
                 <button
                   type="button"
                   onClick={e => this.toggleMenuBar(e)}
