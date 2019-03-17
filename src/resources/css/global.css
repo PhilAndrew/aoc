@@ -244,6 +244,18 @@ button {
   background-size: auto;
   padding: 20px;
 }
+.user-login-area-border {
+  font-weight: 400;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border-color: rgb(226, 233, 243);
+  border-width: 5px;
+  border-style: solid;
+  opacity: 1;
+  background-size: auto;
+  padding: 20px;
+}
+
 .hero {
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e9e8e6+1,ffffff+100 */
 background: rgb(233,232,230); /* Old browsers */

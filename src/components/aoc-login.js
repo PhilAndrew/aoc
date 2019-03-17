@@ -171,7 +171,7 @@ export default class AocLogin extends React.Component {
                 <h1 style={{ float: 'left', fontSize: '23pt'}}>Access Our Community</h1>
                 <div style={{ float: 'right', width: '400px', backgroundImage: `url(${HomepageJpeg})`, opacity: '0.8', backgroundPosition: 'right -460px top -340px', boxShadow: '0 0 3px 3px rgba(0, 0, 0, 0.9) inset', height: '220px' }} />
                 <p style={{ marginTop: '40px' }}>
-                Hello there. Hello there. Hello there. Hello there. Hello there. Hello there. Hello there. Hello there.
+                We enable legal services nonprofits and pro bono clearinghouses improve access to justice for their communities by connecting their clients with pro bono lawyers.
                 </p>
                 </div>
               </div>
@@ -222,28 +222,30 @@ export default class AocLogin extends React.Component {
         </section>
 
         <section className="row" style={{ marginTop: '0px'}}>
+
         <div className="col-md-4" style={{ padding: '20px'}}>
-        <div className="row user-login-area" style={{ height: '200px' }}>
+        <div className="row user-login-area-border" style={{ height: '200px' }}>
         <p>
-        <h1 className="homepageSubtitle">For Lawyer</h1>
-        <div><p>Hello text goes here.</p></div>
+        <h1 className="homepageSubtitle">For Non-Profit</h1>
+        <div><p>Connect your pro bono clients with your trusted pro bono legal partners.</p></div>
         </p>
         </div>
         </div>
 
         <div className="col-md-4" style={{ padding: '20px'}}>
-        <div className="row user-login-area" style={{ height: '200px' }}>
+        <div className="row user-login-area-border" style={{ height: '200px' }}>
         <p>
-        <h1 className="homepageSubtitle">For Non-Profit</h1>
-        <div><p>Hello text goes here.</p></div>
+        <h1 className="homepageSubtitle">For Lawyer</h1>
+        <div><p>Share your legal skills for the good of your community.</p></div>
         </p>
         </div>
         </div>
+
         <div className="col-md-4" style={{ padding: '20px'}}>
-        <div className="row user-login-area" style={{ height: '200px' }}>
+        <div className="row user-login-area-border" style={{ height: '200px' }}>
         <p>
-        <h1 className="homepageSubtitle">For Law Firm coordinator</h1>
-        <div><p>Hello text goes here.</p></div>
+        <h1 className="homepageSubtitle">For Law Firms/Corporate</h1>
+        <div><p>Enable your lawyers to effectively engage in pro bono services.</p></div>
         </p>
         </div>
         </div>
