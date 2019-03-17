@@ -363,3 +363,7 @@ height: 1000px;
   border-color: blue !important;
   border-width: 3px !important;
 }
+
+.share-button {
+  margin-right: 10px;
+}

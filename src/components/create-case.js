@@ -226,7 +226,8 @@ export default () => (
             <textarea id="description" className="form-control" rows="3" placeholder="" required></textarea>
           </div>
           <hr className="mb-4" />
-          <button className="btn btn-primary btn-lg btn-block" type="submit">Share</button>
+          <button className="btn btn-primary btn-lg share-button" type="submit">Share to everyone</button>
+          <button className="btn btn-primary btn-lg share-button" type="submit">Share to my Connections</button>
         </form>
         </div>
       </div>
