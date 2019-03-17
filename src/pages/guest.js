@@ -11,7 +11,7 @@ export default [
     exact: true,
     component: import('../components/home'),
     seo: {
-      title: 'Home | ReactPWA Demo',
+      title: 'Home | AOC Demo',
       description: 'Feature set offered by ReactPWA with pluggable @pawjs plugins. ReactPWA is highly customizable and once can achieve anything as it is extendable',
       image: FeaturesImage,
     },
@@ -25,7 +25,7 @@ export default [
       description: 'About Us',
       image: CSSGlobalLocalImage,
     },
-  },  
+  },
   {
     path: '/create-case',
     exact: true,
@@ -35,7 +35,7 @@ export default [
       description: 'Create Case',
       image: CSSGlobalLocalImage,
     },
-  },   
+  },
   {
     path: '/case-history',
     exact: true,
@@ -51,7 +51,7 @@ export default [
     exact: true,
     component: import('../components/typescript-counter'),
     seo: {
-      title: 'TypeScript Counter | ReactPWA Demo',
+      title: 'TypeScript Counter | AOC Demo',
       description: 'TypeScript is awesome and implementing it with React makes it more awesome. Checkout this simple counter example with react and typescript',
       image: CSSGlobalLocalImage,
     },
@@ -69,7 +69,7 @@ export default [
     component: import('../components/skeleton-loading'),
     skeleton,
     seo: {
-      title: 'Skeleton Loading | ReactPWA Demo',
+      title: 'Skeleton Loading | AOC Demo',
       description: 'Tired of adding ugly loaders? Do not let your users get confused, give them the best user experience of what is getting loaded. Use Skeleton Loading',
       image: SkeletonImage,
     },
@@ -79,7 +79,7 @@ export default [
     exact: true,
     component: import('../components/image-optmization'),
     seo: {
-      title: 'Image Optimization | ReactPWA Demo',
+      title: 'Image Optimization | AOC Demo',
       description: 'Serve optimize images automatically with Lazy loading and WebP support with fallback to JPG/PNG of original image.',
       image: ImageOptimizationImage,
     },
@@ -89,7 +89,7 @@ export default [
     exact: true,
     component: import('../components/contribute'),
     seo: {
-      title: 'Contribute | ReactPWA Demo',
+      title: 'Contribute | AOC Demo',
       description: 'Be a part of larger family. Get involved with us and support our project ReactPWA',
     },
   },
