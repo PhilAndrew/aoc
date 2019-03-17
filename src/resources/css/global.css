@@ -54,7 +54,7 @@ height: 2.77em;
 .pageHeadingSelectedTab {
   border-top: 2px solid;
   border-left: 2px solid;
-  border-right: 2px solid; 
+  border-right: 2px solid;
   border-bottom: 0px;
   border-radius: 0.4em 0.4em 0px 0px;
   border-width: 2px;
@@ -130,7 +130,7 @@ margin-bottom: 15px !important;
 }
 
 .navbar-item img {
-  width: 5em !important;
+  width: 5em;
   height: 4em !important;
   max-height: 4em !important;
 }
@@ -405,4 +405,12 @@ height: 1000px;
   border-color:#1b78f9 !important;
   border-width: 2px !important;
   outline:none !important;
+}
+.mylogo {
+  width: 150px !important;
+  margin-top: 12px;
+}
+.mylogo2 {
+  width: 150px !important;
+
 }
