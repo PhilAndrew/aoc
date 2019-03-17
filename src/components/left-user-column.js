@@ -205,7 +205,7 @@ export default class LeftUserColumn extends React.Component {
             <div className="col-md-12">
               <div className="row">
                 <div className="col-md-12">
-                <label className="tag-button">You have 4 Pending cases.</label>
+                <label className="tag-button">You have 2 Pending cases.</label>
                 <label className="tag-button">You have 8 Approved cases.</label>
                 </div>
               </div>

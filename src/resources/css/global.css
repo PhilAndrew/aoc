@@ -466,8 +466,9 @@ height: 1000px;
   border-width: 1px 1px 1px 0px !important;
 }
 
-.coordinatorTableTitle {
+.coordinatorTableTextTitle {
   margin-bottom: 1em;
+  text-decoration: underline;
 }
 
 .buttonCoordinatorTable {
@@ -482,5 +483,8 @@ height: 1000px;
 }
 .mylogo2 {
   width: 150px !important;
+}
 
+.coordinatorDisplayNone {
+  display: none;
 }

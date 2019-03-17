@@ -19,6 +19,7 @@ export default class CoordinatorCase extends React.Component {
       jurisdictions: props.singleCase.jurisdictions,
       languages: props.singleCase.languages,
       lastValue: props.lastValue,
+      show: true,
     };
   }
 
@@ -106,29 +107,33 @@ export default class CoordinatorCase extends React.Component {
   }
 
   approveHandleClick = () => {
-    // Something
+    this.setState({
+      show: false,
+    });
   }
 
   rejectHandleClick = () => {
-    // Something
+    this.setState({
+      show: false,
+    });
   }
 
   render() {
-    const { lawyerName, title, details, image, applied, lastValue } = this.state;
+    const { lawyerName, title, details, image, applied, lastValue, show } = this.state;
     return(
-      <tr>
+      <tr className={`${!show ? 'coordinatorDisplayNone' : '' }`}>
         <td className={`coordinatorTD ${lastValue ? 'coordinatorTableBottomLeft' : 'coordinatorTableLeft'}`}>
           <p>{lawyerName}</p>
         </td>
         <td className={`coordinatorTD ${lastValue ? 'coordinatorTableBottomMiddle' : ''}`}>
           <a href="#">
-            <p className="coordinatorTableTitle">{title}</p>
+            <p className="coordinatorTableTextTitle font-weight-bold">{title}</p>
           </a>
           <div className="tags-grid">
             {this.renderPracticeArea()}
             {this.renderJurisdictions()}
-            {this.renderLanguages()}
-            {this.renderPriority()}
+            {/* {this.renderLanguages()}
+            {this.renderPriority()} */}
           </div>
         </td>
         <td className={`coordinatorTD ${lastValue ? 'coordinatorTableBottomRight' : 'coordinatorTableRight'}`}>
